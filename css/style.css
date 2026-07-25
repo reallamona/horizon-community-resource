@@ -218,33 +218,21 @@ p {
    Resource Cards
 ========================= */
 
-.resource-page {
-    max-width: 900px;
+.resource-grid {
+    max-width: 1000px;
     margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.resource-page li {
-    background: #1f1f1f;
-    padding: 15px;
-    margin: 12px 0;
-    border-radius: 10px;
-    border: 1px solid #444;
+.resource-card {
+    background: #171a21;
+    border: 1px solid #303744;
+    border-radius: 12px;
+    padding: 25px;
 }
 
-.resource-page ul {
-    background: #2a2a2a;
-    padding: 20px 30px;
-    border-radius: 15px;
-    border: 1px solid #444;
-
-} 
-
-.resource-page a {
-    color: #4284ed;
-    font-size: 1.1rem;
-}
-
-
-.resource-page a:hover {
-    color: #00BF00;
+.resource-card:hover {
+    border-color: #4da3ff;
 }
