@@ -260,3 +260,38 @@ p {
     border-color: #4da3ff;
     color: #79baff;
 }
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    max-width: 900px;
+    margin: 50px auto 20px;
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #444;
+    color: #888;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: #4284ed;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #00BF00;
+}
+
+.footer-update {
+    font-size: 0.9rem;
+}
