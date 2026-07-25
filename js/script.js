@@ -23,7 +23,6 @@ async function init() {
         loadSection("speedrun-resources", "speedrun-resources.html"),
     ]);
 
-    setupToggleButtons();
     setupSearch();
 }
 
