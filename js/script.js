@@ -29,7 +29,6 @@ async function init() {
 init();
 
 /* Search */
-
 function setupSearch() {
 
     const search = document.getElementById("search");
@@ -39,23 +38,19 @@ function setupSearch() {
 
         const filter = search.value.toLowerCase();
 
-        const folders = document.querySelectorAll(".game-folder");
+        const cards = document.querySelectorAll(".resource-card");
 
         let found = false;
 
-        folders.forEach(folder => {
+        cards.forEach(card => {
 
-            const text = folder.textContent.toLowerCase();
+            const text = card.textContent.toLowerCase();
 
             if (text.includes(filter)) {
-                folder.style.display = "";
+                card.style.display = "";
                 found = true;
             } else {
-                folder.style.display = "none";
-            }
-
-            if (filter === "") {
-                folder.open = false;
+                card.style.display = "none";
             }
 
         });
