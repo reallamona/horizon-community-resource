@@ -28,32 +28,6 @@ async function init() {
 
 init();
 
-/* Expand / Collapse Buttons */
-function setupToggleButtons() {
-    document.querySelectorAll(".section-header").forEach(header => {
-
-        const button = header.querySelector(".toggleAll");
-
-        if (!button) return;
-
-        button.addEventListener("click", () => {
-
-            const section = header.parentElement;
-
-            const folders = section.querySelectorAll(".game-folder");
-
-            const expand = button.textContent === "Expand All";
-
-            folders.forEach(folder => {
-                folder.open = expand;
-            });
-
-            button.textContent = expand ? "Collapse All" : "Expand All";
-        });
-
-    });
-}
-
 /* Search */
 
 function setupSearch() {
