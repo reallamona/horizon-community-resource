@@ -314,3 +314,13 @@ nav a.active {
     color: white;
     background: #171a21;
 }
+
+/* =========================
+  Active Navigation Link
+========================= */
+
+nav a.active {
+    color: #4da3ff;
+    border-left: 3px solid #4da3ff;
+    padding-left: 12px;
+}
