@@ -129,3 +129,23 @@ loadPage("pages/home.html");
 document
     .querySelector('[data-page="pages/home.html"]')
     .classList.add("active");
+
+
+/* Sidebar Toggle */
+
+const sidebarToggle = document.getElementById("sidebar-toggle");
+const sidebar = document.getElementById("sidebar");
+const layout = document.querySelector(".layout");
+
+
+if (sidebarToggle) {
+
+    sidebarToggle.addEventListener("click", function() {
+
+        sidebar.classList.toggle("collapsed");
+
+        layout.classList.toggle("sidebar-collapsed");
+
+    });
+
+}
