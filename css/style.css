@@ -353,3 +353,33 @@ nav a.active {
 .layout.sidebar-collapsed {
     grid-template-columns: 70px 1fr;
 }
+
+/* Copy Buttons */
+
+.resource-card li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.copy-link {
+    background: transparent;
+    color: #4da3ff;
+
+    border: 1px solid #303744;
+    border-radius: 6px;
+
+    padding: 5px 10px;
+
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+
+.copy-link:hover {
+    background: #171a21;
+    border-color: #4da3ff;
+    color: white;
+}
