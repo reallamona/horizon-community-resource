@@ -52,6 +52,26 @@ function addCopyButtons() {
 
 }
 
+/* Copy Button Function */
+
+document.addEventListener("click", function(e) {
+
+    if (e.target.closest(".copy-link")) {
+
+        const button = e.target.closest(".copy-link");
+
+        navigator.clipboard.writeText(button.dataset.url);
+
+        button.title = "Copied!";
+
+        setTimeout(() => {
+            button.title = "Copy";
+        }, 1000);
+
+    }
+
+});
+
 /* Navigation */
 
 function setupNavigation() {
