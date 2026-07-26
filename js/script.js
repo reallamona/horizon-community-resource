@@ -38,7 +38,7 @@ function addCopyButtons() {
 
         const button = document.createElement("button");
 
-        button.innerHTML = `<img src="assets/icons/copy.png" alt="Copy">`;
+        button.innerHTML = `<img src="assets/copy.png" alt="Copy">`;
         
         button.className = "copy-link";
 
