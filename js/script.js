@@ -125,3 +125,7 @@ setupNavigation();
 setupSearch();
 setupGamesDropdown();
 loadPage("pages/home.html");
+
+document
+    .querySelector('[data-page="pages/home.html"]')
+    .classList.add("active");
