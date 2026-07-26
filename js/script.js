@@ -149,3 +149,41 @@ if (sidebarToggle) {
     });
 
 }
+
+/* Copy Link Buttons */
+
+document.addEventListener("click", function(e) {
+
+    if (e.target.classList.contains("copy-link")) {
+
+        navigator.clipboard.writeText(
+            e.target.dataset.url
+        );
+
+        e.target.textContent = "✓";
+
+        setTimeout(() => {
+            e.target.textContent = "Copy";
+        }, 1000);
+    }
+
+});
+
+function addCopyButtons() {
+
+    const links = document.querySelectorAll(".resource-card a");
+
+    links.forEach(link => {
+
+        const button = document.createElement("button");
+
+        button.textContent = "Copy";
+        button.className = "copy-link";
+
+        button.dataset.url = link.href;
+
+        link.parentElement.appendChild(button);
+
+    });
+
+}
