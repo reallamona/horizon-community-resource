@@ -286,3 +286,34 @@ p {
     border-color: #4da3ff;
     color: #79baff;
 }
+
+/* =========================
+   Sidebar Navigation
+========================= */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+nav a {
+    display: block;
+    padding: 12px 14px;
+
+    color: #ddd;
+    text-decoration: none;
+
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background: #171a21;
+    color: white;
+    text-decoration: none;
+}
+
+nav a.active {
+    background: #4da3ff;
+    color: white;
+}
