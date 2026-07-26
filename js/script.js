@@ -87,3 +87,18 @@ function setupNavigation() {
 }
 
 setupNavigation();
+
+}
+
+/* Game Toggle */
+const gamesToggle = document.getElementById("games-toggle");
+const gamesMenu = document.getElementById("games-menu");
+
+gamesToggle.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    gamesMenu.style.display =
+        gamesMenu.style.display === "flex" ? "none" : "flex";
+
+    gamesMenu.style.flexDirection = "column";
+});
