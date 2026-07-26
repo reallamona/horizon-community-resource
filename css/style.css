@@ -371,12 +371,24 @@ nav a.active {
     border: 1px solid #303744;
     border-radius: 6px;
 
-    padding: 5px 10px;
+    width: 32px;
+    height: 28px;
 
     cursor: pointer;
-    font-size: 0.85rem;
+
+    font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+
+.copy-link:hover {
+    background: #171a21;
+    border-color: #4da3ff;
+    color: white;
+}
 
 .copy-link:hover {
     background: #171a21;
