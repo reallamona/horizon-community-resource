@@ -60,3 +60,30 @@ function setupSearch() {
     });
 
 }
+
+/* Navigation */
+function setupNavigation() {
+
+    const links = document.querySelectorAll("nav a");
+    const content = document.getElementById("content");
+
+    links.forEach(link => {
+
+        link.addEventListener("click", async function(e) {
+
+            e.preventDefault();
+
+            const page = this.dataset.page;
+
+            const response = await fetch("pages/" + page);
+            const html = await response.text();
+
+            content.innerHTML = html;
+
+        });
+
+    });
+
+}
+
+setupNavigation();
