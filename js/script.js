@@ -27,13 +27,11 @@ async function loadPage(page) {
 }
 
 
-
 /* Navigation */
 
 function setupNavigation() {
 
     const links = document.querySelectorAll("[data-page]");
-
 
     links.forEach(link => {
 
@@ -41,19 +39,13 @@ function setupNavigation() {
 
             e.preventDefault();
 
-            const page = this.dataset.page;
-
-            loadPage(page);
+            loadPage(this.dataset.page);
 
         };
 
     });
 
 }
-
-
-setupNavigation();
-
 
 
 /* Search */
@@ -86,28 +78,25 @@ function setupSearch() {
 }
 
 
-setupSearch();
-
-
-
 /* Games Dropdown */
 
-const gamesToggle = document.querySelector(".nav-category > a");
-const gamesMenu = document.querySelector(".submenu");
+function setupGamesDropdown() {
+
+    const gamesToggle = document.querySelector(".nav-category > a");
+    const gamesMenu = document.querySelector(".submenu");
 
 
-if (gamesToggle && gamesMenu) {
+    if (!gamesToggle || !gamesMenu) return;
+
 
     gamesToggle.addEventListener("click", function(e) {
 
         e.preventDefault();
 
-
         gamesMenu.style.display =
             gamesMenu.style.display === "flex"
             ? "none"
             : "flex";
-
 
         gamesMenu.style.flexDirection = "column";
 
@@ -115,7 +104,11 @@ if (gamesToggle && gamesMenu) {
 
 }
 
-/* Load Home Page On Startup*/
-loadPage("home.html");
 
-}
+/* Start */
+
+setupNavigation();
+setupSearch();
+setupGamesDropdown();
+
+loadPage("pages/home.html");
