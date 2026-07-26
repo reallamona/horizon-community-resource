@@ -288,11 +288,6 @@ nav a:hover {
     text-decoration: none;
 }
 
-nav a.active {
-    background: #4da3ff;
-    color: white;
-}
-
 /* =========================
      Game Dropdown
 ========================= */
