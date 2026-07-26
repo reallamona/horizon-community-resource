@@ -1,38 +1,63 @@
-async function loadSection(id, file) {
+/* Load Pages */
+
+async function loadPage(page) {
+
+    const content = document.getElementById("content");
+
     try {
-        const response = await fetch("sections/" + file);
+        const response = await fetch("pages/" + page);
 
         if (!response.ok) {
-            throw new Error(file + " failed to load");
+            throw new Error(page + " failed to load");
         }
 
-        const content = await response.text();
-        document.getElementById(id).innerHTML = content;
+        const html = await response.text();
+
+        content.innerHTML = html;
+
+        setupNavigation();
 
     } catch (error) {
         console.error(error);
     }
+
 }
 
 
-/* Load Sections */
-async function init() {
-    await Promise.all([
-        loadSection("featured", "featured.html"),
-        loadSection("games", "games.html"),
-        loadSection("speedrun-resources", "speedrun-resources.html"),
-    ]);
+/* Navigation */
 
-    setupSearch();
+function setupNavigation() {
+
+    const links = document.querySelectorAll("[data-page]");
+
+    links.forEach(link => {
+
+        link.onclick = function(e) {
+
+            e.preventDefault();
+
+            const page = this.dataset.page;
+
+            loadPage(page);
+
+        };
+
+    });
+
 }
 
-init();
+
+setupNavigation();
+
+
 
 /* Search */
+
 function setupSearch() {
 
     const search = document.getElementById("search");
-    const noResults = document.getElementById("no-results");
+
+    if (!search) return;
 
     search.addEventListener("input", function () {
 
@@ -40,45 +65,12 @@ function setupSearch() {
 
         const cards = document.querySelectorAll(".resource-card");
 
-        let found = false;
-
         cards.forEach(card => {
 
             const text = card.textContent.toLowerCase();
 
-            if (text.includes(filter)) {
-                card.style.display = "";
-                found = true;
-            } else {
-                card.style.display = "none";
-            }
-
-        });
-
-        noResults.style.display = found || filter === "" ? "none" : "block";
-
-    });
-
-}
-
-/* Navigation */
-function setupNavigation() {
-
-    const links = document.querySelectorAll("nav a");
-    const content = document.getElementById("content");
-
-    links.forEach(link => {
-
-        link.addEventListener("click", async function(e) {
-
-            e.preventDefault();
-
-            const page = this.dataset.page;
-
-            const response = await fetch("pages/" + page);
-            const html = await response.text();
-
-            content.innerHTML = html;
+            card.style.display =
+                text.includes(filter) ? "" : "none";
 
         });
 
@@ -86,19 +78,29 @@ function setupNavigation() {
 
 }
 
-setupNavigation();
 
-}
+setupSearch();
 
-/* Game Toggle */
+
+
+/* Game Dropdown */
+
 const gamesToggle = document.getElementById("games-toggle");
 const gamesMenu = document.getElementById("games-menu");
 
-gamesToggle.addEventListener("click", function(e) {
-    e.preventDefault();
+if (gamesToggle && gamesMenu) {
 
-    gamesMenu.style.display =
-        gamesMenu.style.display === "flex" ? "none" : "flex";
+    gamesToggle.addEventListener("click", function(e) {
 
-    gamesMenu.style.flexDirection = "column";
-});
+        e.preventDefault();
+
+        gamesMenu.style.display =
+            gamesMenu.style.display === "flex"
+            ? "none"
+            : "flex";
+
+        gamesMenu.style.flexDirection = "column";
+
+    });
+
+}
