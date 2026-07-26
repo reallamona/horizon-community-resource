@@ -40,6 +40,8 @@ function addCopyButtons() {
 
         button.innerHTML = `<img src="assets/copy.png" alt="Copy">`;
         
+        button.title = "Copy";
+        
         button.className = "copy-link";
 
         button.dataset.url = link.href;
