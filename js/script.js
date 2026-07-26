@@ -110,5 +110,4 @@ function setupGamesDropdown() {
 setupNavigation();
 setupSearch();
 setupGamesDropdown();
-
 loadPage("pages/home.html");
