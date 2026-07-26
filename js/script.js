@@ -114,3 +114,8 @@ if (gamesToggle && gamesMenu) {
     });
 
 }
+
+/* Load Home Page On Startup*/
+loadPage("home.html");
+
+}
