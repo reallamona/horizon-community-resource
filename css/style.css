@@ -318,3 +318,38 @@ nav a.active {
     color: white;
     background: #171a21;
 }
+
+/* =========================
+     Sidebar Toggle
+========================= */
+
+#sidebar-toggle {
+    background: none;
+    border: none;
+
+    color: #4da3ff;
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+
+/* Collapsed Sidebar */
+
+#sidebar.collapsed {
+    width: 70px;
+    padding: 20px 10px;
+}
+
+
+#sidebar.collapsed input,
+#sidebar.collapsed nav a {
+    display: none;
+}
+
+
+.layout.sidebar-collapsed {
+    grid-template-columns: 70px 1fr;
+}
