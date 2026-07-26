@@ -16,6 +16,8 @@ async function loadPage(page) {
 
         content.innerHTML = html;
 
+        addCopyButtons();
+        
         setupNavigation();
 
     } catch (error) {
