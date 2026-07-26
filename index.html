@@ -11,30 +11,54 @@
 </head>
 
 <body>
-    
-<h1>The Horizon Project</h1>
 
-<p class="intro">
-    A dedicated and collaborative database exploring the Horizon series.
-</p>
+    <header>
+        <h1>The Horizon Project</h1>
+    </header>
 
-<p class="updated">
-    Last updated: July 25, 2026
-</p>
+    <div class="layout">
 
-<input type="text" id="search" placeholder="Search...">
+        <aside id="sidebar">
 
-<p id="no-results" style="display:none;">
-    No results found.
-</p>
-    
-<div id="featured"></div>
+            <input type="text" id="search" placeholder="Search...">
 
-<div id="games"></div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Games</a>
+                <a href="#">Speedrunning</a>
+                <a href="#">Research</a>
+                <a href="#">Community</a>
+            </nav>
 
-<div id="speedrun-resources"></div>
-    
-<script src="js/script.js"></script>
+        </aside>
+
+
+        <main id="content">
+
+            <p class="intro">
+                A dedicated and collaborative database exploring the Horizon series.
+            </p>
+
+            <p class="updated">
+                Last updated: July 25, 2026
+            </p>
+
+            <p id="no-results" style="display:none;">
+                No results found.
+            </p>
+
+            <div id="featured"></div>
+
+            <div id="games"></div>
+
+            <div id="speedrun-resources"></div>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
