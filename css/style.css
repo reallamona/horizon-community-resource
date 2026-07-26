@@ -269,23 +269,31 @@ p {
 nav {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 nav a {
     display: block;
-    padding: 12px 14px;
+    padding: 10px 12px;
 
-    color: #ddd;
+    color: #c5c5c5;
     text-decoration: none;
 
     border-radius: 8px;
+    transition: 0.2s ease;
 }
 
 nav a:hover {
     background: #171a21;
     color: white;
-    text-decoration: none;
+}
+
+/* Active Page Link */
+
+nav a.active {
+    color: #4da3ff;
+    border-left: 2px solid #4da3ff;
+    padding-left: 14px;
 }
 
 /* =========================
@@ -307,14 +315,4 @@ nav a:hover {
 .submenu a:hover {
     color: white;
     background: #171a21;
-}
-
-/* =========================
-  Active Navigation Link
-========================= */
-
-nav a.active {
-    color: #4da3ff;
-    border-left: 2px solid #4da3ff;
-    padding-left: 12px;
 }
