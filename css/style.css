@@ -317,3 +317,24 @@ nav a.active {
     background: #4da3ff;
     color: white;
 }
+
+/* =========================
+     Game Dropdown
+========================= */
+
+.submenu {
+    display: none;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.submenu a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    color: #aaa;
+}
+
+.submenu a:hover {
+    color: white;
+    background: #171a21;
+}
