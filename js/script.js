@@ -38,7 +38,7 @@ function addCopyButtons() {
 
         const button = document.createElement("button");
 
-        button.textContent = "Copy";
+        button.textContent = "⧉";
         button.className = "copy-link";
 
         button.dataset.url = link.href;
