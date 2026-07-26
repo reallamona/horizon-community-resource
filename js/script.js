@@ -39,7 +39,21 @@ function setupNavigation() {
 
             e.preventDefault();
 
-            loadPage(this.dataset.page);
+            const page = this.dataset.page;
+
+            loadPage(page);
+
+
+            // Remove active from all links
+
+            links.forEach(link => {
+                link.classList.remove("active");
+            });
+
+
+            // Add active to clicked link
+
+            this.classList.add("active");
 
         };
 
