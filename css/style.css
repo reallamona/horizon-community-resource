@@ -366,36 +366,32 @@ nav a.active {
 }
 
 
-/* Copy Link Icon */
+/* Copy Button Icon */
 
 .copy-link {
     background: transparent;
-
-    color: #888;
-
     border: none;
-    border-radius: 6px;
 
-    width: 26px;
-    height: 26px;
-
-    padding: 0;
+    width: 28px;
+    height: 28px;
 
     cursor: pointer;
-
-    font-size: 0.9rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
-    opacity: 0.7;
+
+.copy-link img {
+    width: 16px;
+    height: 16px;
+
+    opacity: 0.6;
     transition: 0.2s ease;
 }
 
 
-.copy-link:hover {
-    color: #4da3ff;
-    background: #171a21;
+.copy-link:hover img {
     opacity: 1;
 }
