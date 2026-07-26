@@ -320,7 +320,8 @@ nav a.active {
 ========================= */
 
 nav a.active {
-    color: #4da3ff;
-    border-left: 3px solid #4da3ff;
+    color: #ffffff;
+    background: #171a21;
+    border-left: 2px solid #4da3ff;
     padding-left: 12px;
 }
