@@ -354,7 +354,9 @@ nav a.active {
     grid-template-columns: 70px 1fr;
 }
 
-/* Copy Buttons */
+/* =========================
+   Copy Buttons
+========================= */
 
 .resource-card li {
     display: flex;
@@ -364,34 +366,36 @@ nav a.active {
 }
 
 
+/* Copy Link Icon */
+
 .copy-link {
     background: transparent;
-    color: #4da3ff;
 
-    border: 1px solid #303744;
+    color: #888;
+
+    border: none;
     border-radius: 6px;
 
-    width: 32px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
+
+    padding: 0;
 
     cursor: pointer;
 
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    opacity: 0.7;
+    transition: 0.2s ease;
 }
 
 
 .copy-link:hover {
+    color: #4da3ff;
     background: #171a21;
-    border-color: #4da3ff;
-    color: white;
-}
-
-.copy-link:hover {
-    background: #171a21;
-    border-color: #4da3ff;
-    color: white;
+    opacity: 1;
 }
