@@ -12,6 +12,37 @@ body {
     line-height: 1.6;
 }
 
+
+/* =========================
+   Application Layout
+========================= */
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 1px solid #303744;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    height: calc(100vh - 70px);
+}
+
+#sidebar {
+    padding: 25px;
+    border-right: 1px solid #303744;
+    overflow-y: auto;
+}
+
+#content {
+    padding: 40px;
+    overflow-y: auto;
+}
+
+
 /* =========================
    Main Header
 ========================= */
