@@ -1,11 +1,12 @@
-/* Load Pages */
+/* Page Loader */
 
 async function loadPage(page) {
 
     const content = document.getElementById("content");
 
     try {
-        const response = await fetch("pages/" + page);
+
+        const response = await fetch(page);
 
         if (!response.ok) {
             throw new Error(page + " failed to load");
@@ -18,10 +19,13 @@ async function loadPage(page) {
         setupNavigation();
 
     } catch (error) {
+
         console.error(error);
+
     }
 
 }
+
 
 
 /* Navigation */
@@ -29,6 +33,7 @@ async function loadPage(page) {
 function setupNavigation() {
 
     const links = document.querySelectorAll("[data-page]");
+
 
     links.forEach(link => {
 
@@ -59,17 +64,19 @@ function setupSearch() {
 
     if (!search) return;
 
-    search.addEventListener("input", function () {
+
+    search.addEventListener("input", function() {
 
         const filter = search.value.toLowerCase();
 
-        const cards = document.querySelectorAll(".resource-card");
+        const items = document.querySelectorAll(".resource-card");
 
-        cards.forEach(card => {
 
-            const text = card.textContent.toLowerCase();
+        items.forEach(item => {
 
-            card.style.display =
+            const text = item.textContent.toLowerCase();
+
+            item.style.display =
                 text.includes(filter) ? "" : "none";
 
         });
@@ -83,10 +90,11 @@ setupSearch();
 
 
 
-/* Game Dropdown */
+/* Games Dropdown */
 
-const gamesToggle = document.getElementById("games-toggle");
-const gamesMenu = document.getElementById("games-menu");
+const gamesToggle = document.querySelector(".nav-category > a");
+const gamesMenu = document.querySelector(".submenu");
+
 
 if (gamesToggle && gamesMenu) {
 
@@ -94,10 +102,12 @@ if (gamesToggle && gamesMenu) {
 
         e.preventDefault();
 
+
         gamesMenu.style.display =
             gamesMenu.style.display === "flex"
             ? "none"
             : "flex";
+
 
         gamesMenu.style.flexDirection = "column";
 
