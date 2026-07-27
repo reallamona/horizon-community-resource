@@ -21,10 +21,15 @@ header {
     border-bottom: 1px solid #303744;
 }
 
-h1 {
-    color: #fff;
-    font-size: 2rem;
-    margin: 0;
+/* Site Title */
+
+header h1 a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    color: #ffffff;
 }
 
 p {
