@@ -337,6 +337,15 @@ nav a.active {
 }
 
 
+/* Hide sidebar content */
+
+#sidebar.collapsed input,
+#sidebar.collapsed nav,
+#sidebar.collapsed .nav-category {
+    display: none;
+}
+
+
 .layout.sidebar-collapsed {
     grid-template-columns: 70px 1fr;
 }
