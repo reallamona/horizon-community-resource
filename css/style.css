@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+
 /* =========================
    Base Layout
 ========================= */
@@ -12,10 +13,6 @@ body {
     line-height: 1.6;
 }
 
-/* =========================
-   Application Layout
-========================= */
-
 header {
     height: 70px;
     display: flex;
@@ -23,6 +20,21 @@ header {
     padding: 0 30px;
     border-bottom: 1px solid #303744;
 }
+
+h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+
+/* =========================
+   Layout
+========================= */
 
 .layout {
     display: grid;
@@ -43,63 +55,55 @@ header {
 
 
 /* =========================
-   Main Header
+   Sections
 ========================= */
 
-h1 {
-    color: #ffffff;
-    font-size: 2rem;
+.section-header {
+    max-width: 1000px;
+    margin: 40px auto 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #303744;
+    padding-bottom: 10px;
+}
+
+.section-header h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+
+/* =========================
+   Last Updated
+========================= */
+
+.updated {
+    color: #888;
+    font-size: 0.8rem !important;
     margin: 0;
 }
 
-.intro {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 5px;
-    margin-bottom: 30px;
-}
-
 
 /* =========================
-   Section Titles
-========================= */
-
-h2 {
-    color: #ffffff;
-    text-align: left;
-    font-size: 1.4rem;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-    max-width: 1000px;
-    margin: 40px auto 15px;
-}
-
-.game-folder h2 {
-    text-align: left;
-    max-width: none;
-    margin: 30px 0 15px;
-}
-
-.game-folder h3 {
-    color: #4da3ff;
-    text-align: left;
-    margin: 25px 0 10px;
-    max-width: none;
-}
-
-
-/* =========================
-   Search Bar
+   Search
 ========================= */
 
 #search {
     width: 100%;
-    margin: 0 0 25px;
+    margin-bottom: 25px;
+
     padding: 15px;
+
     background: #171a21;
     color: white;
+
     border: 1px solid #303744;
     border-radius: 12px;
+
     box-sizing: border-box;
 }
 
@@ -109,64 +113,64 @@ h2 {
 
 
 /* =========================
-   Games Header
+   Resource Cards
 ========================= */
 
-.section-header {
+.resource-grid {
     max-width: 1000px;
-    margin: 40px auto 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #303744;
-    padding-bottom: 10px;
-}
 
-.section-header h2 {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
+    margin: 30px auto;
 
-/* =========================
-   Expand / Collapse Button
-========================= */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-.toggleAll {
-    padding: 10px 18px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 10px;
-    background: #4da3ff;
-    color: white;
-    cursor: pointer;
-}
-
-.toggleAll:hover {
-    background: #79baff;
+    gap: 20px;
 }
 
 
-/* =========================
-   Resource Folders
-========================= */
-
+.resource-card,
 .game-folder {
     background: #171a21;
-    max-width: 1000px;
-    margin: 25px auto;
-    padding: 20px;
-    border-radius: 12px;
+
     border: 1px solid #303744;
+    border-radius: 12px;
+
+    padding: 25px;
+
+    transition: 0.2s ease;
 }
 
+
+.resource-card:hover,
 .game-folder:hover {
     border-color: #4da3ff;
 }
 
 
+.resource-card h3,
+.game-folder h3 {
+    color: #4da3ff;
+    margin-top: 0;
+}
+
+
+.resource-card h4 {
+    color: #fff;
+}
+
+
+/* =========================
+   Game Folders
+========================= */
+
+.game-folder {
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+
 .game-folder summary {
-    color: #ffffff;
+    color: white;
 
     font-size: 1.2rem;
     font-weight: 600;
@@ -174,37 +178,38 @@ h2 {
     cursor: pointer;
 }
 
+
 /* =========================
    Lists
 ========================= */
 
 ul {
-    margin: 15px 0;
     padding: 0;
+    margin: 15px 0;
+
     list-style: none;
 }
 
-.game-folder ul {
-    margin-top: 20px;
-    padding: 0;
-    border: none;
-    background: none;
-
-}
 
 li {
-    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     margin: 10px 0;
     padding: 12px 15px;
 
     background: #171a21;
-    border-radius: 8px;
+
     border: 1px solid #303744;
+    border-radius: 8px;
 }
+
 
 li:hover {
     border-color: #4da3ff;
 }
+
 
 /* =========================
    Links
@@ -222,48 +227,6 @@ a:hover {
 
 
 /* =========================
-   Paragraphs
-========================= */
-
-p {
-    font-size: 1.2rem;
-}
-
-/* =========================
-   Last Updated
-========================= */
-
-.updated {
-    color: #888;
-    font-size: 0.85rem;
-    margin: 5px 0 20px;
-    text-align: left;
-}
-
-/* =========================
-   Resource Cards
-========================= */
-
-.resource-grid {
-    max-width: 1000px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.resource-card {
-    background: #171a21;
-    border: 1px solid #303744;
-    border-radius: 12px;
-    padding: 25px;
-}
-
-.resource-card:hover {
-    border-color: #4da3ff;
-}
-
-/* =========================
    Sidebar Navigation
 ========================= */
 
@@ -273,54 +236,65 @@ nav {
     gap: 6px;
 }
 
+
 nav a {
     display: block;
+
     padding: 10px 12px;
 
     color: #c5c5c5;
-    text-decoration: none;
 
     border-radius: 8px;
+
     transition: 0.2s ease;
 }
+
 
 nav a:hover {
     background: #171a21;
     color: white;
+    text-decoration: none;
 }
 
-/* Active Page Link */
 
 nav a.active {
     color: #4da3ff;
     font-weight: 600;
 }
 
+
 /* =========================
-     Game Dropdown
+   Game Dropdown
 ========================= */
 
 .submenu {
     display: none;
+
     margin-left: 12px;
     margin-top: 5px;
+
     padding-left: 10px;
+
     border-left: 1px solid #303744;
 }
+
 
 .submenu a {
     font-size: 0.9rem;
     padding: 6px 10px;
+
     color: #aaa;
 }
+
 
 .submenu a:hover {
     color: white;
     background: #171a21;
 }
 
+
 /* =========================
-     Sidebar Toggle
+   Sidebar Toggle
 ========================= */
 
 #sidebar-toggle {
@@ -328,6 +302,7 @@ nav a.active {
     border: none;
 
     color: #4da3ff;
+
     font-size: 1.5rem;
 
     cursor: pointer;
@@ -336,17 +311,9 @@ nav a.active {
 }
 
 
-/* Collapsed Sidebar */
-
 #sidebar.collapsed {
     width: 70px;
     padding: 20px 10px;
-}
-
-
-#sidebar.collapsed input,
-#sidebar.collapsed nav a {
-    display: none;
 }
 
 
@@ -354,19 +321,14 @@ nav a.active {
     grid-template-columns: 70px 1fr;
 }
 
+
 /* =========================
-      Copy Button
+   Copy Buttons
 ========================= */
-
-.resource-card li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 
 .copy-link {
     background: transparent;
+
     border: none;
 
     width: 28px;
@@ -385,6 +347,7 @@ nav a.active {
     height: 16px;
 
     filter: invert(1);
+
     opacity: 0.7;
 
     transition: 0.2s ease;
