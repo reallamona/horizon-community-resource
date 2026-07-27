@@ -233,7 +233,7 @@ p {
    Last Updated
 ========================= */
 .updated {
-    text-align: center;
+    text-align: left;
     color: #888;
     font-size: 1.2rem;
     margin-top: -20px;
