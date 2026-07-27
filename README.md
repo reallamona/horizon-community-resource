@@ -1,3 +1,9 @@
-This project was created to support the players of Horizon games through resources.
+# The Horizon Project
 
-Note: Keep in mind that this resource is currently managed by a few contributors, so things will take time.
+The Horizon Project is a free community resource for the **Horizon** game series. It brings together useful links, guides, communities, tools, and other resources in one place.
+
+
+## Contributing
+
+No contributions currently.
+```
