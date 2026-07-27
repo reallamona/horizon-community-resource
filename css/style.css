@@ -347,7 +347,7 @@ nav a.active {
 
 
 .layout.sidebar-collapsed {
-    grid-template-columns: 70px 1fr;
+    grid-template-columns: 280px 1fr;
 }
 
 
