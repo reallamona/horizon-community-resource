@@ -6,4 +6,3 @@ The Horizon Project is a free community resource for the **Horizon** game series
 ## Contributing
 
 No contributions currently.
-```
