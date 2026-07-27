@@ -1,4 +1,6 @@
-/* Page Loader */
+/* =========================
+   Page Loader
+========================= */
 
 async function loadPage(page) {
 
@@ -17,10 +19,7 @@ async function loadPage(page) {
         content.innerHTML = html;
 
         addCopyButtons();
-
         addLastUpdated(page);
-        
-        setupNavigation();
 
     } catch (error) {
 
@@ -30,7 +29,10 @@ async function loadPage(page) {
 
 }
 
-/* Copy Link Buttons */
+
+/* =========================
+   Copy Buttons
+========================= */
 
 function addCopyButtons() {
 
@@ -38,15 +40,22 @@ function addCopyButtons() {
 
     links.forEach(link => {
 
+        // Prevent duplicate buttons
+        if (link.parentElement.querySelector(".copy-link")) {
+            return;
+        }
+
+
         const button = document.createElement("button");
 
         button.innerHTML = `<img src="assets/copy.png" alt="Copy">`;
-        
+
         button.title = "Copy";
-        
+
         button.className = "copy-link";
 
         button.dataset.url = link.href;
+
 
         link.parentElement.appendChild(button);
 
@@ -54,62 +63,73 @@ function addCopyButtons() {
 
 }
 
-/* Copy Button Function */
+
 
 document.addEventListener("click", function(e) {
 
-    if (e.target.closest(".copy-link")) {
+    const button = e.target.closest(".copy-link");
 
-        const button = e.target.closest(".copy-link");
+    if (!button) return;
 
-        navigator.clipboard.writeText(button.dataset.url);
 
-        button.title = "Copied!";
+    navigator.clipboard.writeText(button.dataset.url)
+        .then(() => {
 
-        setTimeout(() => {
-            button.title = "Copy";
-        }, 1000);
+            button.title = "Copied!";
 
-    }
+            setTimeout(() => {
+                button.title = "Copy";
+            }, 1000);
+
+        });
 
 });
 
-/* Navigation */
+
+/* =========================
+   Navigation
+========================= */
 
 function setupNavigation() {
 
-    const links = document.querySelectorAll("[data-page]");
+    document.querySelectorAll("[data-page]")
+        .forEach(link => {
 
-    links.forEach(link => {
 
         link.onclick = function(e) {
 
             e.preventDefault();
 
+
             const page = this.dataset.page;
+
 
             loadPage(page);
 
 
-            // Remove active from all links
+            document
+                .querySelectorAll("[data-page]")
+                .forEach(link => {
 
-            links.forEach(link => {
-                link.classList.remove("active");
-            });
+                    link.classList.remove("active");
 
+                });
 
-            // Add active to clicked link
 
             this.classList.add("active");
 
         };
+
 
     });
 
 }
 
 
-/* Search */
+
+/* =========================
+   Search
+========================= */
 
 function setupSearch() {
 
@@ -120,84 +140,67 @@ function setupSearch() {
 
     search.addEventListener("input", function() {
 
+
         const filter = search.value.toLowerCase();
 
-        const items = document.querySelectorAll(".resource-card");
+
+        document
+            .querySelectorAll(".resource-card")
+            .forEach(card => {
 
 
-        items.forEach(item => {
+                const text = card.textContent.toLowerCase();
 
-            const text = item.textContent.toLowerCase();
 
-            item.style.display =
-                text.includes(filter) ? "" : "none";
+                card.style.display =
+                    text.includes(filter)
+                    ? ""
+                    : "none";
 
-        });
+
+            });
 
     });
 
 }
 
 
-/* Games Dropdown */
+/* =========================
+   Games Dropdown
+========================= */
 
 function setupGamesDropdown() {
 
-    const gamesToggle = document.querySelector(".nav-category > a");
-    const gamesMenu = document.querySelector(".submenu");
+    const button = document.querySelector(".nav-category > a");
+
+    const menu = document.querySelector(".submenu");
 
 
-    if (!gamesToggle || !gamesMenu) return;
+    if (!button || !menu) return;
 
 
-    gamesToggle.addEventListener("click", function(e) {
+    button.onclick = function(e) {
 
         e.preventDefault();
 
-        gamesMenu.style.display =
-            gamesMenu.style.display === "flex"
+
+        menu.style.display =
+            menu.style.display === "flex"
             ? "none"
             : "flex";
 
-        gamesMenu.style.flexDirection = "column";
 
-    });
+        menu.style.flexDirection = "column";
 
-}
-
-
-/* Start */
-
-setupNavigation();
-setupSearch();
-setupGamesDropdown();
-loadPage("pages/home.html");
-
-document
-    .querySelector('[data-page="pages/home.html"]')
-    .classList.add("active");
-
-
-/* Sidebar Toggle */
-
-const sidebarToggle = document.getElementById("sidebar-toggle");
-const sidebar = document.getElementById("sidebar");
-const layout = document.querySelector(".layout");
-
-
-if (sidebarToggle) {
-
-    sidebarToggle.addEventListener("click", function() {
-
-        sidebar.classList.toggle("collapsed");
-
-        layout.classList.toggle("sidebar-collapsed");
-
-    });
+    };
 
 }
 
-/* Last Updated */
+
+
+/* =========================
+   Last Updated
+========================= */
 
 function addLastUpdated(page) {
 
@@ -205,10 +208,72 @@ function addLastUpdated(page) {
 
     if (!updated) return;
 
+
     const fileName = page.split("/").pop();
 
+
     if (pageUpdates[fileName]) {
-        updated.textContent = "Last updated: " + pageUpdates[fileName];
+
+        updated.textContent =
+            "Last updated: " + pageUpdates[fileName];
+
     }
 
 }
+
+
+
+/* =========================
+   Sidebar
+========================= */
+
+function setupSidebar() {
+
+    const button = document.getElementById("sidebar-toggle");
+
+    const sidebar = document.getElementById("sidebar");
+
+    const layout = document.querySelector(".layout");
+
+
+    if (!button) return;
+
+
+    button.onclick = function() {
+
+        sidebar.classList.toggle("collapsed");
+
+        layout.classList.toggle("sidebar-collapsed");
+
+    };
+
+}
+
+
+
+/* =========================
+   Initialize
+========================= */
+
+function init() {
+
+    setupNavigation();
+
+    setupSearch();
+
+    setupGamesDropdown();
+
+    setupSidebar();
+
+
+    loadPage("pages/home.html");
+
+
+    document
+        .querySelector('[data-page="pages/home.html"]')
+        .classList.add("active");
+
+}
+
+
+init();
