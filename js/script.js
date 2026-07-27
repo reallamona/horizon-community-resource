@@ -197,3 +197,18 @@ if (sidebarToggle) {
 
 }
 
+/* Last Updated */
+
+function addLastUpdated(page) {
+
+    const updated = document.querySelector(".updated");
+
+    if (!updated) return;
+
+    const fileName = page.split("/").pop();
+
+    if (pageUpdates[fileName]) {
+        updated.textContent = "Last updated: " + pageUpdates[fileName];
+    }
+
+}
