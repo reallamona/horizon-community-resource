@@ -227,6 +227,21 @@ a:hover {
 
 
 /* =========================
+   Resource Links
+========================= */
+
+.resource-card a,
+.game-folder a {
+    color: #4da3ff;
+}
+
+.resource-card a:hover,
+.game-folder a:hover {
+    color: #79baff;
+}
+
+
+/* =========================
    Sidebar Navigation
 ========================= */
 
