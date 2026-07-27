@@ -12,7 +12,7 @@ const pageUpdates = {
     "horizon-forbidden-west.html": "July 27, 2026",
     "burning-shores.html": "July 27, 2026",
     "call-of-the-mountain.html": "July 27, 2026",
-    "lego-horizon-adventures.html": "July 27, 2026"
-    "hunters-gathering.html": "July 27, 2026"
-    "steel-frontiers.html": "July 27, 2026"
+    "lego-horizon-adventures.html": "July 27, 2026",
+    "hunters-gathering.html": "July 27, 2026",
+    "steel-frontiers.html": "July 27, 2026",
 };
