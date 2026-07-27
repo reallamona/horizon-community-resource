@@ -1,12 +1,11 @@
 const pageUpdates = {
 
-    // Main pages
     "home.html": "July 27, 2026",
     "community.html": "July 27, 2026",
     "research.html": "July 27, 2026",
     "speedrunning.html": "July 27, 2026",
 
-    // Games
+    
     "horizon-zero-dawn.html": "July 27, 2026",
     "frozen-wilds.html": "July 27, 2026",
     "zero-dawn-remastered.html": "July 27, 2026",
