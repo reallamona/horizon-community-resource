@@ -14,9 +14,17 @@ async function loadPage(page) {
             throw new Error(page + " failed to load");
         }
 
-        const html = await response.text();
-
-        content.innerHTML = html;
+       const text = await response.text();
+       
+       if (page.endsWith(".md")) {
+          
+          content.innerHTML = marked.parse(text);
+       
+       } else {
+          
+          content.innerHTML = text;
+       
+       }
 
         addCopyButtons();
         addLastUpdated(page);
