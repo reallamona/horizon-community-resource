@@ -65,7 +65,7 @@ p {
 
 .section-header {
     max-width: 1000px;
-    margin: 40px 0 15px;
+    margin: 40px 0 30px;
 
     display: flex;
     justify-content: space-between;
@@ -73,7 +73,6 @@ p {
 
     border-bottom: 1px solid #303744;
     padding-bottom: 10px;
-   
 }
 
 .section-header h2 {
