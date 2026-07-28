@@ -388,3 +388,77 @@ nav a.active {
 .copy-link:hover img {
     opacity: 1;
 }
+
+/* =========================
+   Mobile Layout
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        height: 60px;
+        padding: 0 20px;
+    }
+
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+
+    .layout {
+        display: block;
+        height: auto;
+    }
+
+
+    #sidebar {
+        border-right: none;
+        border-bottom: 1px solid #303744;
+        padding: 15px;
+    }
+
+
+    #content {
+        padding: 20px;
+    }
+
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resource-card,
+    .game-folder {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    .section-header {
+        margin: 20px 0 15px;
+    }
+
+
+    .section-header h2 {
+        font-size: 1.2rem;
+    }
+
+
+    nav a {
+        padding: 12px;
+    }
+
+
+    .submenu {
+        margin-left: 0;
+    }
+
+
+    li {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+}
