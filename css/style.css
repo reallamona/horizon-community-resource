@@ -429,11 +429,12 @@ nav a.active {
     }
 
 
-    .resource-card,
-    .game-folder {
-        width: 100%;
-        box-sizing: border-box;
-    }
+   .resource-card,
+   .game-folder {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+}
 
 
     .section-header {
@@ -457,8 +458,9 @@ nav a.active {
 
 
     li {
-        padding: 10px;
-        font-size: 0.95rem;
-    }
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 0.95rem;
+}
 
 }
