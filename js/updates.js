@@ -1,6 +1,6 @@
 const pageUpdates = {
 
-    "home.html": "July 27, 2026",
+    "home.md": "July 27, 2026",
     "community.html": "July 27, 2026",
     "research.html": "July 27, 2026",
     "speedrunning.html": "July 27, 2026",
