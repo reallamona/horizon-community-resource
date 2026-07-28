@@ -89,8 +89,9 @@ p {
 
 .updated {
     color: #888;
-    font-size: 0.8rem !important;
+    font-size: 1.0rem;
     margin: 0;
+    font-weight: 500;
 }
 
 
