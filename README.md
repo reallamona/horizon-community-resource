@@ -5,7 +5,3 @@ The Horizon Project is a free community resource for the Horizon series, bringin
 ## Contributions
 
 No contributors currently.
-
-## Our Discord
-
-https://discord.gg/dDzrXX3p9u
