@@ -8,4 +8,4 @@ No contributors currently.
 
 ## Our Discord
 
-https://discord.gg/G6hXDPg5h
+https://discord.gg/dDzrXX3p9u
