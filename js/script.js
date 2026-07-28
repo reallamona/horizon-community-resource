@@ -274,11 +274,11 @@ function init() {
     setupSidebar();
 
 
-    loadPage("pages/home.html");
+    loadPage("pages/home.md");
 
 
     document
-        .querySelector('[data-page="pages/home.html"]')
+        .querySelector('[data-page="pages/home.md"]')
         .classList.add("active");
 
 }
