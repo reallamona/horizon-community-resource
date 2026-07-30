@@ -50,7 +50,7 @@ function loadPageScript(page) {
         home();
     }
 
-    if (page.includes("games.html") && typeof games === "function") {
+    if (page.includes("games/") && typeof games === "function") {
         games();
     }
 
