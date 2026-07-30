@@ -1,34 +1,81 @@
 function community() {
 
     fetch("data/community.json")
+
         .then(response => response.json())
+
         .then(data => {
 
             const content = document.getElementById("content");
 
-            const container = document.createElement("div");
+            const grid = document.createElement("div");
 
-            container.className = "resource-grid";
+            grid.className = "resource-grid";
+
 
             data.forEach(item => {
 
-                container.innerHTML += `
 
-                    <div class="resource-card">
+                const card = document.createElement("div");
+
+                card.className = "resource-card";
+
+
+                if (item.title) {
+
+                    card.innerHTML = `
 
                         <h3>${item.title}</h3>
 
                         <p>${item.description}</p>
 
-                    </div>
+                    `;
 
-                `;
+                }
+
+
+                if (item.category) {
+
+                    card.innerHTML = `
+
+                        <h4>${item.category}</h4>
+
+                        <ul>
+
+                            ${item.links.map(link => `
+
+                                <li>
+
+                                    <a href="${link.url}" target="_blank" rel="noopener">
+                                        ${link.name}
+                                    </a>
+
+                                </li>
+
+                            `).join("")}
+
+                        </ul>
+
+                    `;
+
+                }
+
+
+                grid.appendChild(card);
+
 
             });
 
-            content.appendChild(container);
+
+            content.appendChild(grid);
+
 
         })
-        .catch(error => console.error(error));
+
+        .catch(error => {
+
+            console.error("Community failed:", error);
+
+        });
 
 }
