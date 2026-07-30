@@ -23,6 +23,8 @@ async function loadPage(page) {
        } else {
           
           content.innerHTML = text;
+          
+          loadPageScript(page);
        
        }
 
