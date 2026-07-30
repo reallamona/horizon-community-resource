@@ -1,14 +1,45 @@
 {
-  "title": "...",
-  "intro": {
-    "title": "...",
-    "description": "..."
-  },
-  "sections": [
+  "title": "Games",
+  "games": [
     {
-      "title": "...",
-      "description": "...",
-      "links": []
+      "title": "Horizon Zero Dawn",
+      "description": "Guides, research, and resources.",
+      "page": "games/horizon-zero-dawn.html"
+    },
+    {
+      "title": "Horizon Zero Dawn: The Frozen Wilds",
+      "description": "Guides, research, and resources.",
+      "page": "games/frozen-wilds.html"
+    },
+    {
+      "title": "Horizon Zero Dawn Remastered",
+      "description": "Guides, research, and resources.",
+      "page": "games/zero-dawn-remastered.html"
+    },
+    {
+      "title": "Horizon Forbidden West",
+      "description": "Guides, research, and resources.",
+      "page": "games/horizon-forbidden-west.html"
+    },
+    {
+      "title": "Horizon Forbidden West: Burning Shores",
+      "description": "Guides, research, and resources.",
+      "page": "games/burning-shores.html"
+    },
+    {
+      "title": "Horizon Call Of The Mountain",
+      "description": "Guides, research, and resources.",
+      "page": "games/call-of-the-mountain.html"
+    },
+    {
+      "title": "LEGO Horizon Adventures",
+      "description": "Guides, research, and resources.",
+      "page": "games/lego-horizon-adventures.html"
+    },
+    {
+      "title": "Horizon Steel Frontiers",
+      "description": "Guides, research, and resources.",
+      "page": "games/steel-frontiers.html"
     }
   ]
 }
