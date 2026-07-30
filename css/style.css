@@ -2,38 +2,87 @@
 
 
 /* =========================
+   Variables
+========================= */
+
+:root {
+
+    --background: #0f1115;
+    --surface: #171a21;
+    --border: #303744;
+
+    --text: #f5f5f5;
+    --muted: #888;
+
+    --accent: #4da3ff;
+    --accent-hover: #79baff;
+
+}
+
+
+/* =========================
+   Global Reset
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================
    Base Layout
 ========================= */
 
 body {
-    background: #0f1115;
-    color: #f5f5f5;
+
+    background: var(--background);
+
+    color: var(--text);
+
     font-family: "Inter", sans-serif;
+
     margin: 0;
+
     line-height: 1.6;
+
 }
+
 
 header {
+
     height: 70px;
+
     display: flex;
+
     align-items: center;
+
     padding: 0 30px;
-    border-bottom: 1px solid #303744;
+
+    border-bottom: 1px solid var(--border);
+
 }
 
-/* Site Title */
 
 header h1 a {
+
     color: #ffffff;
+
     text-decoration: none;
+
 }
+
 
 header h1 a:hover {
+
     color: #ffffff;
+
 }
 
+
 p {
+
     font-size: 1.1rem;
+
 }
 
 
@@ -42,20 +91,33 @@ p {
 ========================= */
 
 .layout {
+
     display: grid;
+
     grid-template-columns: 280px 1fr;
+
     height: calc(100vh - 70px);
+
 }
+
 
 #sidebar {
+
     padding: 25px;
-    border-right: 1px solid #303744;
+
+    border-right: 1px solid var(--border);
+
     overflow-y: auto;
+
 }
 
+
 #content {
+
     padding: 40px;
+
     overflow-y: auto;
+
 }
 
 
@@ -64,21 +126,32 @@ p {
 ========================= */
 
 .section-header {
+
     max-width: 1000px;
+
     margin: 40px 0 30px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
-    border-bottom: 1px solid #303744;
+    border-bottom: 1px solid var(--border);
+
     padding-bottom: 10px;
+
 }
 
+
 .section-header h2 {
+
     margin: 0;
+
     color: #fff;
+
     font-size: 1.4rem;
+
 }
 
 
@@ -87,10 +160,15 @@ p {
 ========================= */
 
 .updated {
-    color: #888;
+
+    color: var(--muted);
+
     font-size: 1rem;
+
     margin: 10px 0 25px;
+
     font-weight: 500;
+
 }
 
 
@@ -99,22 +177,28 @@ p {
 ========================= */
 
 #search {
+
     width: 100%;
+
     margin-bottom: 25px;
 
     padding: 15px;
 
-    background: #171a21;
+    background: var(--surface);
+
     color: white;
 
-    border: 1px solid #303744;
+    border: 1px solid var(--border);
+
     border-radius: 12px;
 
-    box-sizing: border-box;
 }
 
+
 #search:focus {
-    border-color: #4da3ff;
+
+    border-color: var(--accent);
+
 }
 
 
@@ -123,45 +207,58 @@ p {
 ========================= */
 
 .resource-grid {
+
     max-width: 1000px;
 
     margin: 30px 0;
 
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
     gap: 20px;
-   
+
 }
+
 
 .resource-card,
 .game-folder {
-    background: #171a21;
 
-    border: 1px solid #303744;
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
     border-radius: 12px;
 
     padding: 25px;
 
     transition: 0.2s ease;
+
 }
 
 
 .resource-card:hover,
 .game-folder:hover {
-    border-color: #4da3ff;
+
+    border-color: var(--accent);
+
 }
 
 
 .resource-card h3,
 .game-folder h3 {
+
     color: #ffffff;
+
     margin-top: 0;
+
 }
 
 
 .resource-card h4 {
+
     color: #fff;
+
 }
 
 
@@ -170,18 +267,24 @@ p {
 ========================= */
 
 .game-folder {
+
     max-width: 1000px;
+
     margin: 25px 0;
+
 }
 
 
 .game-folder summary {
+
     color: white;
 
     font-size: 1.2rem;
+
     font-weight: 600;
 
     cursor: pointer;
+
 }
 
 
@@ -190,30 +293,41 @@ p {
 ========================= */
 
 ul {
+
     padding: 0;
+
     margin: 15px 0;
 
     list-style: none;
+
 }
 
 
 li {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     margin: 10px 0;
+
     padding: 12px 15px;
 
-    background: #171a21;
+    background: var(--surface);
 
-    border: 1px solid #303744;
+    border: 1px solid var(--border);
+
     border-radius: 8px;
+
 }
 
 
 li:hover {
-    border-color: #4da3ff;
+
+    border-color: var(--accent);
+
 }
 
 
@@ -222,28 +336,36 @@ li:hover {
 ========================= */
 
 a {
-    color: #4da3ff;
+
+    color: var(--accent);
+
     text-decoration: none;
+
 }
+
 
 a:hover {
-    color: #79baff;
+
+    color: var(--accent-hover);
+
     text-decoration: underline;
+
 }
 
-
-/* =========================
-   Resource Links
-========================= */
 
 .resource-card a,
 .game-folder a {
-    color: #4da3ff;
+
+    color: var(--accent);
+
 }
+
 
 .resource-card a:hover,
 .game-folder a:hover {
-    color: #79baff;
+
+    color: var(--accent-hover);
+
 }
 
 
@@ -252,13 +374,18 @@ a:hover {
 ========================= */
 
 nav {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 6px;
+
 }
 
 
 nav a {
+
     display: block;
 
     padding: 10px 12px;
@@ -268,19 +395,27 @@ nav a {
     border-radius: 8px;
 
     transition: 0.2s ease;
+
 }
 
 
 nav a:hover {
-    background: #171a21;
+
+    background: var(--surface);
+
     color: white;
+
     text-decoration: none;
+
 }
 
 
 nav a.active {
-    color: #4da3ff;
+
+    color: var(--accent);
+
     font-weight: 600;
+
 }
 
 
@@ -289,28 +424,37 @@ nav a.active {
 ========================= */
 
 .submenu {
+
     display: none;
 
     margin-left: 12px;
+
     margin-top: 5px;
 
     padding-left: 10px;
 
-    border-left: 1px solid #303744;
+    border-left: 1px solid var(--border);
+
 }
 
 
 .submenu a {
+
     font-size: 0.9rem;
+
     padding: 6px 10px;
 
     color: #aaa;
+
 }
 
 
 .submenu a:hover {
+
     color: white;
-    background: #171a21;
+
+    background: var(--surface);
+
 }
 
 
@@ -319,36 +463,42 @@ nav a.active {
 ========================= */
 
 #sidebar-toggle {
+
     background: none;
+
     border: none;
 
-    color: #4da3ff;
+    color: var(--accent);
 
     font-size: 1.5rem;
 
     cursor: pointer;
 
     margin-bottom: 20px;
+
 }
 
 
 #sidebar.collapsed {
-    width: 70px;
+
     padding: 20px 10px;
+
 }
 
-
-/* Hide sidebar content */
 
 #sidebar.collapsed input,
 #sidebar.collapsed nav,
 #sidebar.collapsed .nav-category {
+
     display: none;
+
 }
 
 
 .layout.sidebar-collapsed {
+
     grid-template-columns: 70px 1fr;
+
 }
 
 
@@ -357,23 +507,30 @@ nav a.active {
 ========================= */
 
 .copy-link {
+
     background: transparent;
 
     border: none;
 
     width: 28px;
+
     height: 28px;
 
     cursor: pointer;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
 }
 
 
 .copy-link img {
+
     width: 16px;
+
     height: 16px;
 
     filter: invert(1);
@@ -381,12 +538,16 @@ nav a.active {
     opacity: 0.7;
 
     transition: 0.2s ease;
+
 }
 
 
 .copy-link:hover img {
+
     opacity: 1;
+
 }
+
 
 /* =========================
    Mobile Layout
@@ -395,71 +556,101 @@ nav a.active {
 @media (max-width: 768px) {
 
     header {
+
         height: 60px;
+
         padding: 0 20px;
+
     }
 
 
     h1 {
+
         font-size: 1.5rem;
+
     }
 
 
     .layout {
+
         display: block;
+
         height: auto;
+
     }
 
 
     #sidebar {
+
         border-right: none;
-        border-bottom: 1px solid #303744;
+
+        border-bottom: 1px solid var(--border);
+
         padding: 15px;
+
     }
 
 
     #content {
+
         padding: 20px;
+
     }
 
 
     .resource-grid {
+
         grid-template-columns: 1fr;
+
     }
 
 
-   .resource-card,
-   .game-folder {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px;
-}
+    .resource-card,
+    .game-folder {
+
+        width: 100%;
+
+        padding: 15px;
+
+    }
 
 
     .section-header {
+
         margin: 20px 0 15px;
+
     }
 
 
     .section-header h2 {
+
         font-size: 1.2rem;
+
     }
 
 
     nav a {
+
         padding: 12px;
+
     }
 
 
     .submenu {
+
         margin-left: 0;
+
     }
 
 
     li {
-    margin: 8px 0;
-    padding: 10px;
-    font-size: 0.95rem;
-}
+
+        margin: 8px 0;
+
+        padding: 10px;
+
+        font-size: 0.95rem;
+
+    }
 
 }
