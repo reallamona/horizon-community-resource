@@ -214,7 +214,7 @@ function setupSidebar() {
 
     const layout = document.querySelector(".layout");
 
-    if (!button) return;
+    if (!button || !sidebar || !layout) return;
 
     button.onclick = function() {
 
