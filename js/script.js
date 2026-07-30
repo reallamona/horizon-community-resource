@@ -192,12 +192,14 @@ function addLastUpdated(page) {
 
     if (pageUpdates[fileName]) {
 
-    updated.textContent =
-        "Last updated: " + pageUpdates[fileName];
+        updated.textContent =
+            "Last updated: " + pageUpdates[fileName];
 
-} else {
+    } else {
 
-    updated.textContent = "";
+        updated.textContent = "";
+
+    }
 
 }
 
