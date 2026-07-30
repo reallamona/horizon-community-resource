@@ -1,44 +1,73 @@
-fetch("../data/home.json")
-    .then(response => response.json())
-    .then(data => {
+function home() {
 
-        const container = document.getElementById("home-content");
+    fetch("data/home.json")
 
-        data.forEach(item => {
+        .then(response => response.json())
 
-            if (item.description) {
-                container.innerHTML += `
-                    <div class="resource-card">
+        .then(data => {
+
+            const content = document.getElementById("content");
+
+            const grid = document.createElement("div");
+
+            grid.className = "resource-grid";
+
+
+            data.forEach(item => {
+
+                const card = document.createElement("div");
+
+                card.className = "resource-card";
+
+
+                if (item.title) {
+
+                    card.innerHTML = `
+
                         <h3>${item.title}</h3>
-                        <p>${item.description}</p>
-                    </div>
-                `;
-            }
 
-            if (item.links) {
+                        ${item.description ? `<p>${item.description}</p>` : ""}
 
-                let links = "";
+                        ${item.links ? `
 
-                item.links.forEach(link => {
-                    links += `
-                        <li>
-                            <a href="${link.url}" target="_blank" rel="noopener">
-                                ${link.name}
-                            </a>
-                        </li>
+                            <ul>
+
+                                ${item.links.map(link => `
+
+                                    <li>
+
+                                        <a href="${link.url}" target="_blank" rel="noopener">
+                                            ${link.name}
+                                        </a>
+
+                                    </li>
+
+                                `).join("")}
+
+                            </ul>
+
+                        ` : ""}
+
                     `;
-                });
 
-                container.innerHTML += `
-                    <div class="resource-card">
-                        <h3>${item.title}</h3>
-                        <ul>
-                            ${links}
-                        </ul>
-                    </div>
-                `;
-            }
+                }
+
+
+                grid.appendChild(card);
+
+
+            });
+
+
+            content.appendChild(grid);
+
+
+        })
+
+        .catch(error => {
+
+            console.error("Home failed:", error);
 
         });
 
-    });
+}
