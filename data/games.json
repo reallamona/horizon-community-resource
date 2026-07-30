@@ -1,45 +1,38 @@
-{
-  "title": "Games",
-  "games": [
-    {
-      "title": "Horizon Zero Dawn",
-      "description": "Guides, research, and resources.",
-      "page": "games/horizon-zero-dawn.html"
-    },
-    {
-      "title": "Horizon Zero Dawn: The Frozen Wilds",
-      "description": "Guides, research, and resources.",
-      "page": "games/frozen-wilds.html"
-    },
-    {
-      "title": "Horizon Zero Dawn Remastered",
-      "description": "Guides, research, and resources.",
-      "page": "games/zero-dawn-remastered.html"
-    },
-    {
-      "title": "Horizon Forbidden West",
-      "description": "Guides, research, and resources.",
-      "page": "games/horizon-forbidden-west.html"
-    },
-    {
-      "title": "Horizon Forbidden West: Burning Shores",
-      "description": "Guides, research, and resources.",
-      "page": "games/burning-shores.html"
-    },
-    {
-      "title": "Horizon Call Of The Mountain",
-      "description": "Guides, research, and resources.",
-      "page": "games/call-of-the-mountain.html"
-    },
-    {
-      "title": "LEGO Horizon Adventures",
-      "description": "Guides, research, and resources.",
-      "page": "games/lego-horizon-adventures.html"
-    },
-    {
-      "title": "Horizon Steel Frontiers",
-      "description": "Guides, research, and resources.",
-      "page": "games/steel-frontiers.html"
-    }
-  ]
-}
+[
+  {
+    "title": "Horizon Zero Dawn",
+    "page": "horizon-zero-dawn.html"
+  },
+  {
+    "title": "Horizon Forbidden West",
+    "page": "horizon-forbidden-west.html"
+  },
+  {
+    "title": "The Frozen Wilds",
+    "page": "frozen-wilds.html"
+  },
+  {
+    "title": "Burning Shores",
+    "page": "burning-shores.html"
+  },
+  {
+    "title": "Horizon Call of the Mountain",
+    "page": "call-of-the-mountain.html"
+  },
+  {
+    "title": "LEGO Horizon Adventures",
+    "page": "lego-horizon-adventures.html"
+  },
+  {
+    "title": "Horizon Zero Dawn Remastered",
+    "page": "zero-dawn-remastered.html"
+  },
+  {
+    "title": "Horizon Hunters Gathering",
+    "page": "hunters-gathering.html"
+  },
+  {
+    "title": "Horizon Steel Frontiers",
+    "page": "steel-frontiers.html"
+  }
+]
