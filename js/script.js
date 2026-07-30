@@ -14,19 +14,19 @@ async function loadPage(page) {
             throw new Error(page + " failed to load");
         }
 
-       const text = await response.text();
-       
-       if (page.endsWith(".md")) {
-          
-          content.innerHTML = marked.parse(text);
-       
-       } else {
-          
-          content.innerHTML = text;
-          
-          loadPageScript(page);
-       
-       }
+        const text = await response.text();
+
+        if (page.endsWith(".md")) {
+
+            content.innerHTML = marked.parse(text);
+
+        } else {
+
+            content.innerHTML = text;
+
+            loadPageScript(page);
+
+        }
 
         addCopyButtons();
         addLastUpdated(page);
@@ -41,38 +41,62 @@ async function loadPage(page) {
 
 
 /* =========================
+   Page Scripts
+========================= */
+
+function loadPageScript(page) {
+
+    if (page.includes("home.html") && typeof home === "function") {
+        home();
+    }
+
+    if (page.includes("games.html") && typeof games === "function") {
+        games();
+    }
+
+    if (page.includes("community.html") && typeof community === "function") {
+        community();
+    }
+
+    if (page.includes("research.html") && typeof research === "function") {
+        research();
+    }
+
+    if (page.includes("speedrunning.html") && typeof speedrunning === "function") {
+        speedrunning();
+    }
+
+}
+
+
+/* =========================
    Copy Buttons
 ========================= */
 
 function addCopyButtons() {
 
-    const links = document.querySelectorAll(".resource-card a");
+    document.querySelectorAll(".resource-card a")
+        .forEach(link => {
 
-    links.forEach(link => {
+            if (link.parentElement.querySelector(".copy-link")) {
+                return;
+            }
 
-        // Prevent duplicate buttons
-        if (link.parentElement.querySelector(".copy-link")) {
-            return;
-        }
+            const button = document.createElement("button");
 
+            button.innerHTML = `<img src="assets/copy.png" alt="Copy">`;
 
-        const button = document.createElement("button");
+            button.title = "Copy";
 
-        button.innerHTML = `<img src="assets/copy.png" alt="Copy">`;
+            button.className = "copy-link";
 
-        button.title = "Copy";
+            button.dataset.url = link.href;
 
-        button.className = "copy-link";
+            link.parentElement.appendChild(button);
 
-        button.dataset.url = link.href;
-
-
-        link.parentElement.appendChild(button);
-
-    });
+        });
 
 }
-
 
 
 document.addEventListener("click", function(e) {
@@ -80,7 +104,6 @@ document.addEventListener("click", function(e) {
     const button = e.target.closest(".copy-link");
 
     if (!button) return;
-
 
     navigator.clipboard.writeText(button.dataset.url)
         .then(() => {
@@ -105,36 +128,26 @@ function setupNavigation() {
     document.querySelectorAll("[data-page]")
         .forEach(link => {
 
+            link.onclick = function(e) {
 
-        link.onclick = function(e) {
+                e.preventDefault();
 
-            e.preventDefault();
+                const page = this.dataset.page;
 
+                loadPage(page);
 
-            const page = this.dataset.page;
+                document.querySelectorAll("[data-page]")
+                    .forEach(link => {
+                        link.classList.remove("active");
+                    });
 
+                this.classList.add("active");
 
-            loadPage(page);
+            };
 
-
-            document
-                .querySelectorAll("[data-page]")
-                .forEach(link => {
-
-                    link.classList.remove("active");
-
-                });
-
-
-            this.classList.add("active");
-
-        };
-
-
-    });
+        });
 
 }
-
 
 
 /* =========================
@@ -147,26 +160,19 @@ function setupSearch() {
 
     if (!search) return;
 
-
     search.addEventListener("input", function() {
-
 
         const filter = search.value.toLowerCase();
 
-
-        document
-            .querySelectorAll(".resource-card")
+        document.querySelectorAll(".resource-card")
             .forEach(card => {
 
-
                 const text = card.textContent.toLowerCase();
-
 
                 card.style.display =
                     text.includes(filter)
                     ? ""
                     : "none";
-
 
             });
 
@@ -176,7 +182,7 @@ function setupSearch() {
 
 
 /* =========================
-   Games Dropdown
+   Dropdown
 ========================= */
 
 function setupGamesDropdown() {
@@ -185,20 +191,16 @@ function setupGamesDropdown() {
 
     const menu = document.querySelector(".submenu");
 
-
     if (!button || !menu) return;
-
 
     button.onclick = function(e) {
 
         e.preventDefault();
 
-
         menu.style.display =
             menu.style.display === "flex"
             ? "none"
             : "flex";
-
 
         menu.style.flexDirection = "column";
 
@@ -207,9 +209,8 @@ function setupGamesDropdown() {
 }
 
 
-
 /* =========================
-   Last Updated
+   Updates
 ========================= */
 
 function addLastUpdated(page) {
@@ -218,9 +219,7 @@ function addLastUpdated(page) {
 
     if (!updated) return;
 
-
     const fileName = page.split("/").pop();
-
 
     if (pageUpdates[fileName]) {
 
@@ -230,7 +229,6 @@ function addLastUpdated(page) {
     }
 
 }
-
 
 
 /* =========================
@@ -245,9 +243,7 @@ function setupSidebar() {
 
     const layout = document.querySelector(".layout");
 
-
     if (!button) return;
-
 
     button.onclick = function() {
 
@@ -258,7 +254,6 @@ function setupSidebar() {
     };
 
 }
-
 
 
 /* =========================
@@ -275,9 +270,7 @@ function init() {
 
     setupSidebar();
 
-
     loadPage("pages/home.html");
-
 
     document
         .querySelector('[data-page="pages/home.html"]')
