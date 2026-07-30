@@ -1,1 +1,14 @@
-
+{
+  "title": "...",
+  "intro": {
+    "title": "...",
+    "description": "..."
+  },
+  "sections": [
+    {
+      "title": "...",
+      "description": "...",
+      "links": []
+    }
+  ]
+}
