@@ -1,51 +1,48 @@
-{
-  "title": "Community",
-  "intro": {
+[
+  {
     "title": "Horizon Community",
     "description": "Communities and discussion hubs for Horizon players, creators, and researchers."
   },
-  "sections": [
-    {
-      "title": "Discord Communities",
-      "links": [
-        {
-          "title": "Horizon Discord",
-          "url": "https://discord.gg/horizon"
-        },
-        {
-          "title": "Horizon Hunters Gathering Discord",
-          "url": "https://discord.gg/huntersgathering"
-        },
-        {
-          "title": "Arktix's Discord",
-          "url": "https://discord.gg/arktix-962184289150181426"
-        }
-      ]
-    },
-    {
-      "title": "Reddit Communities",
-      "links": [
-        {
-          "title": "r/Horizon",
-          "url": "https://www.reddit.com/r/horizon/"
-        },
-        {
-          "title": "r/HorizonZeroDawn",
-          "url": "https://www.reddit.com/r/HorizonZeroDawn/"
-        },
-        {
-          "title": "r/HorizonForbiddenWest",
-          "url": "https://www.reddit.com/r/HorizonForbiddenWest/"
-        },
-        {
-          "title": "r/HuntersGathering",
-          "url": "https://www.reddit.com/r/huntersgathering/"
-        },
-        {
-          "title": "r/HorizonScreenshots",
-          "url": "https://www.reddit.com/r/HorizonScreenshots/"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "category": "Discord Communities",
+    "links": [
+      {
+        "name": "Horizon Discord",
+        "url": "https://discord.gg/horizon"
+      },
+      {
+        "name": "Horizon Hunters Gathering Discord",
+        "url": "https://discord.gg/huntersgathering"
+      },
+      {
+        "name": "Arktix's Discord",
+        "url": "https://discord.gg/arktix-962184289150181426"
+      }
+    ]
+  },
+  {
+    "category": "Reddit Communities",
+    "links": [
+      {
+        "name": "r/Horizon",
+        "url": "https://www.reddit.com/r/horizon/"
+      },
+      {
+        "name": "r/HorizonZeroDawn",
+        "url": "https://www.reddit.com/r/HorizonZeroDawn/"
+      },
+      {
+        "name": "r/HorizonForbiddenWest",
+        "url": "https://www.reddit.com/r/HorizonForbiddenWest/"
+      },
+      {
+        "name": "r/HuntersGathering",
+        "url": "https://www.reddit.com/r/huntersgathering/"
+      },
+      {
+        "name": "r/HorizonScreenshots",
+        "url": "https://www.reddit.com/r/HorizonScreenshots/"
+      }
+    ]
+  }
+]
