@@ -41,35 +41,6 @@ async function loadPage(page) {
 
 
 /* =========================
-   Page Scripts
-========================= */
-
-function loadPageScript(page) {
-
-    if (page.includes("home.html") && typeof home === "function") {
-        home();
-    }
-
-    if (page.includes("games/") && typeof games === "function") {
-        games();
-    }
-
-    if (page.includes("community.html") && typeof community === "function") {
-        community();
-    }
-
-    if (page.includes("research.html") && typeof research === "function") {
-        research();
-    }
-
-    if (page.includes("speedrunning.html") && typeof speedrunning === "function") {
-        speedrunning();
-    }
-
-}
-
-
-/* =========================
    Copy Buttons
 ========================= */
 
