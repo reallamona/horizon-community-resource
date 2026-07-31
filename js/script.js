@@ -240,3 +240,5 @@ function init() {
         .classList.add("active");
 
 }
+
+init();
