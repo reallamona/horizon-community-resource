@@ -156,6 +156,7 @@ function setupGamesDropdown() {
 
     if (!button || !menu) return;
 
+
     button.onclick = function(e) {
 
         e.preventDefault();
@@ -168,6 +169,18 @@ function setupGamesDropdown() {
         menu.style.flexDirection = "column";
 
     };
+
+
+    menu.querySelectorAll("[data-page]")
+        .forEach(link => {
+
+            link.onclick = function() {
+
+                menu.style.display = "none";
+
+            };
+
+        });
 
 }
 
