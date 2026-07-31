@@ -201,31 +201,6 @@ function addLastUpdated(page) {
 
 
 /* =========================
-   Sidebar
-========================= */
-
-function setupSidebar() {
-
-    const button = document.getElementById("sidebar-toggle");
-
-    const sidebar = document.getElementById("sidebar");
-
-    const layout = document.querySelector(".layout");
-
-    if (!button || !sidebar || !layout) return;
-
-    button.onclick = function() {
-
-        sidebar.classList.toggle("collapsed");
-
-        layout.classList.toggle("sidebar-collapsed");
-
-    };
-
-}
-
-
-/* =========================
    Initialize
 ========================= */
 
