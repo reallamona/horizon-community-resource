@@ -4,7 +4,7 @@ The Horizon Project is dedicated to documenting, preserving, and sharing the tec
 
 ## Inspiration 
 
-We take massive inspiration from zeldauniverse.net.
+We take massive inspiration from https://zeldauniverse.net/
 
 ## Contributions
 
