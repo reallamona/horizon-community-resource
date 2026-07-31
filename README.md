@@ -1,6 +1,6 @@
 # The Horizon Project
 
-The Horizon Project is a free community resource for the Horizon series, bringing together speedrunning, glitch hunting, research, guides, tools, discoveries, and technical resources.
+The Horizon Project is dedicated to documenting, preserving, and sharing the technical knowledge that drives the Horizon speedrunning and research communities.
 
 ## Contributions
 
