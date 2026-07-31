@@ -16,12 +16,7 @@ async function loadPage(page) {
 
         const text = await response.text();
 
-        if (page.endsWith(".md")) {
-
-            content.innerHTML = marked.parse(text);
-
-        } else {
-
+   
             content.innerHTML = text;
 
         }
@@ -188,10 +183,14 @@ function addLastUpdated(page) {
 
     if (!updated) return;
 
-    if (pageUpdates[page]) {
+    const update =
+        pageUpdates[page] ||
+        pageUpdates[page.split("/").pop()];
+
+    if (update) {
 
         updated.textContent =
-            "Last updated: " + pageUpdates[page];
+            "Last updated: " + update;
 
     } else {
 
