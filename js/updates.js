@@ -2,10 +2,10 @@ const pageUpdates = {
 
      // Main
     
-    "home.html": "July 27, 2026",
-    "community.html": "July 27, 2026",
-    "research.html": "July 27, 2026",
-    "speedrunning.html": "July 27, 2026",
+    "home.html": "July 31, 2026",
+    "community.html": "July 28, 2026",
+    "research.html": "July 28, 2026",
+    "speedrunning.html": "July 28, 2026",
 
      // Games
     
