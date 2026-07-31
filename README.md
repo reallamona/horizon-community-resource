@@ -2,6 +2,10 @@
 
 The Horizon Project is dedicated to documenting, preserving, and sharing the technical knowledge that drives the Horizon speedrunning and research communities.
 
+## Inspiration 
+
+We take massive inspiration from zeldauniverse.net.
+
 ## Contributions
 
 No contributors currently.
