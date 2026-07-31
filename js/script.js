@@ -212,8 +212,6 @@ function init() {
 
     setupGamesDropdown();
 
-    setupSidebar();
-
     loadPage("pages/home.html");
 
     document
