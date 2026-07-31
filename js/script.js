@@ -19,7 +19,6 @@ async function loadPage(page) {
    
             content.innerHTML = text;
 
-        }
 
         addCopyButtons();
         addLastUpdated(page);
