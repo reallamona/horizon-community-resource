@@ -171,16 +171,26 @@ function setupGamesDropdown() {
     };
 
 
-    menu.querySelectorAll("[data-page]")
-        .forEach(link => {
+    document.addEventListener("click", function(e) {
 
-            link.onclick = function() {
+        if (!e.target.closest(".nav-category")) {
 
-                menu.style.display = "none";
+            menu.style.display = "none";
 
-            };
+        }
+
+    });
+
+
+    menu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", function() {
+
+            menu.style.display = "none";
 
         });
+
+    });
 
 }
 
