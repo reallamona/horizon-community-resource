@@ -350,16 +350,16 @@ a:hover {
 
 
 /* =========================
-   Sidebar Navigation
+   Navigation
 ========================= */
 
 nav {
 
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
 
-    gap: 6px;
+    gap: 10px;
 
 }
 
@@ -368,13 +368,11 @@ nav a {
 
     display: block;
 
-    padding: 10px 12px;
+    padding: 10px 14px;
 
     color: #c5c5c5;
 
     border-radius: 8px;
-
-    transition: 0.2s ease;
 
 }
 
@@ -403,26 +401,41 @@ nav a.active {
    Game Dropdown
 ========================= */
 
+.nav-category {
+
+    position: relative;
+
+}
+
+
 .submenu {
 
     display: none;
 
-    margin-left: 12px;
+    position: absolute;
 
-    margin-top: 5px;
+    top: 100%;
 
-    padding-left: 10px;
+    left: 0;
 
-    border-left: 1px solid var(--border);
+    min-width: 250px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 10px;
+
+    z-index: 10;
 
 }
 
 
 .submenu a {
 
-    font-size: 0.9rem;
-
-    padding: 6px 10px;
+    padding: 8px 12px;
 
     color: #aaa;
 
@@ -431,56 +444,11 @@ nav a.active {
 
 .submenu a:hover {
 
+    background: var(--background);
+
     color: white;
 
-    background: var(--surface);
-
 }
-
-
-/* =========================
-   Sidebar Toggle
-========================= */
-
-#sidebar-toggle {
-
-    background: none;
-
-    border: none;
-
-    color: var(--accent);
-
-    font-size: 1.5rem;
-
-    cursor: pointer;
-
-    margin-bottom: 20px;
-
-}
-
-
-#sidebar.collapsed {
-
-    padding: 20px 10px;
-
-}
-
-
-#sidebar.collapsed input,
-#sidebar.collapsed nav,
-#sidebar.collapsed .nav-category {
-
-    display: none;
-
-}
-
-
-.layout.sidebar-collapsed {
-
-    grid-template-columns: 70px 1fr;
-
-}
-
 
 /* =========================
    Copy Buttons
@@ -537,36 +505,16 @@ nav a.active {
 
     header {
 
-        height: 60px;
-
-        padding: 0 20px;
-
-    }
-
-
-    h1 {
-
-        font-size: 1.5rem;
-
-    }
-
-
-    .layout {
-
-        display: block;
-
         height: auto;
 
+        padding: 20px;
+
     }
 
 
-    #sidebar {
+    nav {
 
-        border-right: none;
-
-        border-bottom: 1px solid var(--border);
-
-        padding: 15px;
+        flex-wrap: wrap;
 
     }
 
@@ -585,51 +533,9 @@ nav a.active {
     }
 
 
-    .resource-card,
-    .game-folder {
-
-        width: 100%;
-
-        padding: 15px;
-
-    }
-
-
-    .section-header {
-
-        margin: 20px 0 15px;
-
-    }
-
-
-    .section-header h2 {
-
-        font-size: 1.2rem;
-
-    }
-
-
-    nav a {
-
-        padding: 12px;
-
-    }
-
-
     .submenu {
 
-        margin-left: 0;
-
-    }
-
-
-    li {
-
-        margin: 8px 0;
-
-        padding: 10px;
-
-        font-size: 0.95rem;
+        position: static;
 
     }
 
