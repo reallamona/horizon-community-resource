@@ -87,36 +87,16 @@ p {
 
 
 /* =========================
-   Layout
+   Main Content
 ========================= */
-
-.layout {
-
-    display: grid;
-
-    grid-template-columns: 280px 1fr;
-
-    height: calc(100vh - 70px);
-
-}
-
-
-#sidebar {
-
-    padding: 25px;
-
-    border-right: 1px solid var(--border);
-
-    overflow-y: auto;
-
-}
-
 
 #content {
 
-    padding: 40px;
+    max-width: 1200px;
 
-    overflow-y: auto;
+    margin: auto;
+
+    padding: 40px;
 
 }
 
