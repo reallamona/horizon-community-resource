@@ -188,12 +188,10 @@ function addLastUpdated(page) {
 
     if (!updated) return;
 
-    const fileName = page.split("/").pop();
-
-    if (pageUpdates[fileName]) {
+    if (pageUpdates[page]) {
 
         updated.textContent =
-            "Last updated: " + pageUpdates[fileName];
+            "Last updated: " + pageUpdates[page];
 
     } else {
 
