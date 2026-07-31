@@ -231,8 +231,6 @@ function init() {
 
     setupNavigation();
 
-    setupSearch();
-
     setupGamesDropdown();
 
     loadPage("pages/home.html");
@@ -242,6 +240,3 @@ function init() {
         .classList.add("active");
 
 }
-
-
-init();
