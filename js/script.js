@@ -1,4 +1,14 @@
 /* =========================
+   Configuration
+========================= */
+
+const CONFIG = {
+    homePage: "pages/home.html",
+    copyTimeout: 1000
+};
+
+
+/* =========================
    Page Loader
 ========================= */
 
@@ -11,14 +21,10 @@ async function loadPage(page) {
         const response = await fetch(page);
 
         if (!response.ok) {
-            throw new Error(page + " failed to load");
+            throw new Error(`${page} failed to load`);
         }
 
-        const text = await response.text();
-
-   
-            content.innerHTML = text;
-
+        content.innerHTML = await response.text();
 
         addCopyButtons();
         addLastUpdated(page);
@@ -33,127 +39,73 @@ async function loadPage(page) {
 
 
 /* =========================
-   Copy Buttons
-========================= */
-
-function addCopyButtons() {
-
-    document.querySelectorAll(".resource-card a")
-        .forEach(link => {
-
-            if (link.parentElement.querySelector(".copy-link")) {
-                return;
-            }
-
-            const button = document.createElement("button");
-
-            button.innerHTML = `<img src="assets/copy.png" alt="Copy">`;
-
-            button.title = "Copy";
-
-            button.className = "copy-link";
-
-            button.dataset.url = link.href;
-
-            link.parentElement.appendChild(button);
-
-        });
-
-}
-
-
-document.addEventListener("click", function(e) {
-
-    const button = e.target.closest(".copy-link");
-
-    if (!button) return;
-
-    navigator.clipboard.writeText(button.dataset.url)
-        .then(() => {
-
-            button.title = "Copied!";
-
-            setTimeout(() => {
-                button.title = "Copy";
-            }, 1000);
-
-        });
-
-});
-
-
-/* =========================
    Navigation
 ========================= */
 
+function setActiveLink(link) {
+
+    document.querySelectorAll("[data-page]").forEach(item => {
+        item.classList.remove("active");
+    });
+
+    link.classList.add("active");
+
+}
+
+
 function setupNavigation() {
 
-    document.querySelectorAll("[data-page]")
-        .forEach(link => {
+    document.querySelectorAll("[data-page]").forEach(link => {
 
-            link.onclick = function(e) {
+        link.addEventListener("click", function (e) {
 
-                e.preventDefault();
+            e.preventDefault();
 
-                const page = this.dataset.page;
-
-                loadPage(page);
-
-                document.querySelectorAll("[data-page]")
-                    .forEach(link => {
-                        link.classList.remove("active");
-                    });
-
-                this.classList.add("active");
-
-            };
+            loadPage(this.dataset.page);
+            setActiveLink(this);
 
         });
+
+    });
 
 }
 
 
 /* =========================
-   Dropdown
+   Games Dropdown
 ========================= */
 
 function setupGamesDropdown() {
 
     const button = document.querySelector(".nav-category > a");
-
     const menu = document.querySelector(".submenu");
 
     if (!button || !menu) return;
 
-
-    button.onclick = function(e) {
+    button.addEventListener("click", function (e) {
 
         e.preventDefault();
 
         menu.style.display =
             menu.style.display === "flex"
-            ? "none"
-            : "flex";
+                ? "none"
+                : "flex";
 
         menu.style.flexDirection = "column";
 
-    };
+    });
 
-
-    document.addEventListener("click", function(e) {
+    document.addEventListener("click", function (e) {
 
         if (!e.target.closest(".nav-category")) {
-
             menu.style.display = "none";
-
         }
 
     });
 
-
     menu.querySelectorAll("a").forEach(link => {
 
-        link.addEventListener("click", function() {
+        link.addEventListener("click", function () {
 
             menu.style.display = "none";
 
@@ -165,7 +117,59 @@ function setupGamesDropdown() {
 
 
 /* =========================
-   Updates
+   Copy Buttons
+========================= */
+
+function addCopyButtons() {
+
+    document.querySelectorAll(".resource-card a").forEach(link => {
+
+        if (link.parentElement.querySelector(".copy-link")) return;
+
+        const button = document.createElement("button");
+
+        button.className = "copy-link";
+        button.title = "Copy";
+        button.dataset.url = link.href;
+        button.innerHTML = `<img src="assets/copy.png" alt="Copy">`;
+
+        link.parentElement.appendChild(button);
+
+    });
+
+}
+
+
+function copyLink(url, button) {
+
+    navigator.clipboard.writeText(url).then(() => {
+
+        button.title = "Copied!";
+
+        setTimeout(() => {
+
+            button.title = "Copy";
+
+        }, CONFIG.copyTimeout);
+
+    });
+
+}
+
+
+document.addEventListener("click", function (e) {
+
+    const button = e.target.closest(".copy-link");
+
+    if (!button) return;
+
+    copyLink(button.dataset.url, button);
+
+});
+
+
+/* =========================
+   Last Updated
 ========================= */
 
 function addLastUpdated(page) {
@@ -178,16 +182,9 @@ function addLastUpdated(page) {
         pageUpdates[page] ||
         pageUpdates[page.split("/").pop()];
 
-    if (update) {
-
-        updated.textContent =
-            "Last updated: " + update;
-
-    } else {
-
-        updated.textContent = "";
-
-    }
+    updated.textContent = update
+        ? `Last updated: ${update}`
+        : "";
 
 }
 
@@ -199,15 +196,15 @@ function addLastUpdated(page) {
 function init() {
 
     setupNavigation();
-
     setupGamesDropdown();
 
-    loadPage("pages/home.html");
+    loadPage(CONFIG.homePage);
 
     document
-        .querySelector('[data-page="pages/home.html"]')
+        .querySelector(`[data-page="${CONFIG.homePage}"]`)
         .classList.add("active");
 
 }
 
-init();
+
+document.addEventListener("DOMContentLoaded", init);
