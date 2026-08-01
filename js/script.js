@@ -114,37 +114,6 @@ function setupNavigation() {
 
 
 /* =========================
-   Search
-========================= */
-
-function setupSearch() {
-
-    const search = document.getElementById("search");
-
-    if (!search) return;
-
-    search.addEventListener("input", function() {
-
-        const filter = search.value.toLowerCase();
-
-        document.querySelectorAll(".resource-card")
-            .forEach(card => {
-
-                const text = card.textContent.toLowerCase();
-
-                card.style.display =
-                    text.includes(filter)
-                    ? ""
-                    : "none";
-
-            });
-
-    });
-
-}
-
-
-/* =========================
    Dropdown
 ========================= */
 
