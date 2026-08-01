@@ -107,11 +107,11 @@ p {
 
 #content {
 
-    max-width: 1200px;
+    max-width: var(--content-width);
 
     margin: auto;
 
-    padding: 40px;
+    padding: var(--space-lg);
 
 }
 
@@ -122,9 +122,9 @@ p {
 
 .section-header {
 
-    max-width: 1000px;
+    max-width: var(--section-width);
 
-    margin: 40px 0 30px;
+    margin: var(--space-lg) 0 var(--space-md);
 
     display: flex;
 
@@ -134,7 +134,7 @@ p {
 
     border-bottom: 1px solid var(--border);
 
-    padding-bottom: 10px;
+    padding-bottom: var(--space-xs);
 
 }
 
@@ -172,15 +172,15 @@ p {
 
 .resource-grid {
 
-    max-width: 1000px;
+    max-width: var(--section-width);
 
-    margin: 30px 0;
+    margin: var(--space-md) 0;
 
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+    gap: var(--space-sm);
 
 }
 
@@ -192,19 +192,22 @@ p {
 
     border: 1px solid var(--border);
 
-    border-radius: 12px;
+    border-radius: var(--radius-medium);
 
     padding: 25px;
 
-    transition: 0.2s ease;
+    transition:
+        border-color var(--transition),
+        transform var(--transition);
 
 }
-
 
 .resource-card:hover,
 .game-folder:hover {
 
     border-color: var(--accent);
+
+    transform: translateY(-2px);
 
 }
 
@@ -275,7 +278,7 @@ li {
 
     align-items: center;
 
-    margin: 10px 0;
+    margin: var(--space-xs) 0;
 
     padding: 12px 15px;
 
@@ -283,10 +286,11 @@ li {
 
     border: 1px solid var(--border);
 
-    border-radius: 8px;
+    border-radius: var(--radius-small);
+
+    transition: border-color var(--transition);
 
 }
-
 
 li:hover {
 
@@ -357,21 +361,23 @@ nav a {
 
     color: #c5c5c5;
 
-    border-radius: 8px;
+    border-radius: var(--radius-small);
+
+    transition:
+        background var(--transition),
+        color var(--transition);
 
 }
 
-
 nav a:hover {
 
-    background: var(--surface);
+    background: rgba(77, 163, 255, 0.08);
 
-    color: white;
+    color: var(--text);
 
     text-decoration: none;
 
 }
-
 
 nav a.active {
 
@@ -380,7 +386,6 @@ nav a.active {
     font-weight: 600;
 
 }
-
 
 /* =========================
    Game Dropdown
@@ -409,11 +414,13 @@ nav a.active {
 
     border: 1px solid var(--border);
 
-    border-radius: 10px;
+    border-radius: var(--radius-medium);
 
-    padding: 10px;
+    padding: var(--space-xs);
 
     z-index: 10;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 
 }
 
@@ -483,10 +490,26 @@ nav a.active {
 
 
 /* =========================
+   Accessibility
+========================= */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline: 2px solid var(--accent);
+
+    outline-offset: 2px;
+
+}
+
+
+/* =========================
    Mobile Layout
 ========================= */
 
 @media (max-width: 768px) {
+
+    /* Layout */
 
     header {
 
@@ -496,14 +519,6 @@ nav a.active {
 
     }
 
-
-    nav {
-
-        flex-wrap: wrap;
-
-    }
-
-
     #content {
 
         padding: 20px;
@@ -511,16 +526,26 @@ nav a.active {
     }
 
 
-    .resource-grid {
+    /* Navigation */
 
-        grid-template-columns: 1fr;
+    nav {
+
+        flex-wrap: wrap;
 
     }
-
 
     .submenu {
 
         position: static;
+
+    }
+
+
+    /* Content */
+
+    .resource-grid {
+
+        grid-template-columns: 1fr;
 
     }
 
