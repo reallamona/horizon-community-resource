@@ -7,6 +7,7 @@
 
 :root {
 
+    /* Colors */
     --background: #0f1115;
     --surface: #171a21;
     --border: #303744;
@@ -16,6 +17,19 @@
 
     --accent: #4da3ff;
     --accent-hover: #79baff;
+
+    /* Radius */
+    --radius-small: 8px;
+    --radius-medium: 12px;
+
+    /* Spacing */
+    --space-xs: 10px;
+    --space-sm: 20px;
+    --space-md: 30px;
+    --space-lg: 40px;
+
+    /* Animation */
+    --transition: 0.2s ease;
 
 }
 
