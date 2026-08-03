@@ -1,3 +1,7 @@
+/* =========================
+   Games Dropdown
+========================= */
+
 function setupGamesDropdown() {
 
     const button =
