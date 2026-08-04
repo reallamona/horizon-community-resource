@@ -38,9 +38,8 @@ async function loadPage(page) {
         }
 
         content.innerHTML = await response.text();
-
-        addCopyButtons();
-        addLastUpdated(page);
+       
+       initializePage(page);
 
     } catch (error) {
 
