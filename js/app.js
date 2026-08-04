@@ -64,27 +64,6 @@ function setupNavigation() {
 
 
 /* =========================
-   Last Updated
-========================= */
-
-function addLastUpdated(page) {
-
-    const updated = document.querySelector(".updated");
-
-    if (!updated) return;
-
-    const update =
-        pageUpdates[page] ||
-        pageUpdates[page.split("/").pop()];
-
-    updated.textContent = update
-        ? `Last updated: ${update}`
-        : "";
-
-}
-
-
-/* =========================
    Initialize
 ========================= */
 
