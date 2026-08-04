@@ -52,6 +52,19 @@ async function loadPage(page) {
 
 
 /* =========================
+   Page Initialization
+========================= */
+
+function initializePage(page) {
+
+    addCopyButtons();
+    addLastUpdated(page);
+    setupGamesDropdown();
+
+}
+
+
+/* =========================
    Navigation
 ========================= */
 
