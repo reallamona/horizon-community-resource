@@ -1,3 +1,7 @@
+/* =========================
+   Page Updates
+========================= */
+
 const pageUpdates = {
 
     // Main Pages
@@ -15,4 +19,26 @@ const pageUpdates = {
     "games/lego-horizon-adventures.html": "August 2, 2026",
     "games/hunters-gathering.html": "August 2, 2026",
     "games/steel-frontiers.html": "August 2, 2026"
+
 };
+
+
+/* =========================
+   Last Updated
+========================= */
+
+function addLastUpdated(page) {
+
+    const updated = document.querySelector(".updated");
+
+    if (!updated) return;
+
+    const update =
+        pageUpdates[page] ||
+        pageUpdates[page.split("/").pop()];
+
+    updated.textContent = update
+        ? `Last updated: ${update}`
+        : "";
+
+}
