@@ -6,10 +6,6 @@ async function loadPage(page) {
 
     const content = document.getElementById("content");
 
-    content.innerHTML = `
-        <p>Loading...</p>
-    `;
-
     try {
 
         const response = await fetch(page);
