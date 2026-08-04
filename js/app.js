@@ -70,7 +70,6 @@ function setActiveLink(link) {
 
 }
 
-
 function setupNavigation() {
 
     document.querySelectorAll("[data-page]").forEach(link => {
@@ -79,7 +78,9 @@ function setupNavigation() {
 
             e.preventDefault();
 
-            loadPage(this.dataset.page);
+            const page = this.dataset.page;
+
+            loadPage(page);
             setActiveLink(this);
 
         });
