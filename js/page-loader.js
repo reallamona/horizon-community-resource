@@ -15,8 +15,10 @@ async function loadPage(page) {
         }
 
         content.innerHTML = await response.text();
+
+        STATE.currentPage = page;
        
-       initializePage(page);
+        initializePage(page);
 
     } catch (error) {
 
