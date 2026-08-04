@@ -74,6 +74,8 @@ function init() {
 
     loadPage(CONFIG.homePage);
 
+}
+
     document
         .querySelector(`[data-page="${CONFIG.homePage}"]`)
         .classList.add("active");
