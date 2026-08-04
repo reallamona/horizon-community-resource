@@ -62,11 +62,14 @@ async function loadPage(page) {
 
 function setActiveLink(link) {
 
-    document.querySelectorAll("[data-page]").forEach(item => {
-        item.classList.remove("active");
-    });
+    document.querySelectorAll("[data-page]")
+        .forEach(item => {
+            item.classList.remove("active");
+        });
 
-    link.classList.add("active");
+    if (link) {
+        link.classList.add("active");
+    }
 
 }
 
