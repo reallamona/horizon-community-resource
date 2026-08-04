@@ -74,11 +74,13 @@ function init() {
 
     loadPage(CONFIG.homePage);
 
-}
+    const homeLink = document.querySelector(
+        `[data-page="${CONFIG.homePage}"]`
+    );
 
-    document
-        .querySelector(`[data-page="${CONFIG.homePage}"]`)
-        .classList.add("active");
+    if (homeLink) {
+        homeLink.classList.add("active");
+    }
 
 }
 
