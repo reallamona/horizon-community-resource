@@ -44,10 +44,6 @@ async function loadPage(page) {
 
     } catch (error) {
 
-        content.innerHTML = `
-            <h2>Error Loading Page</h2>
-            <p>${error.message}</p>
-        `;
 
         console.error(error);
 
