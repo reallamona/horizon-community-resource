@@ -38,6 +38,5 @@ function initializePage(page) {
 
     addCopyButtons();
     addLastUpdated(page);
-    setupGamesDropdown();
 
 }
