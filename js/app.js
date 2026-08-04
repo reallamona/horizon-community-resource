@@ -18,6 +18,15 @@ const CONFIG = {
 
 
 /* =========================
+   Application State
+========================= */
+
+const STATE = {
+    currentPage: null
+};
+
+
+/* =========================
    Navigation
 ========================= */
 
