@@ -4,40 +4,55 @@
 
 function setupGamesDropdown() {
 
-    const button = document.querySelector(".nav-category > a");
-    const menu = document.querySelector(".submenu");
+    const button =
+        document.querySelector(".nav-category > a");
+
+    const menu =
+        document.querySelector(".submenu");
+
 
     if (!button || !menu) return;
 
-    button.addEventListener("click", function (e) {
+
+    button.addEventListener("click", (e) => {
 
         e.preventDefault();
 
+        const open =
+            menu.style.display === "flex";
+
+
         menu.style.display =
-            menu.style.display === "flex"
-                ? "none"
-                : "flex";
+            open ? "none" : "flex";
 
         menu.style.flexDirection = "column";
 
     });
 
-    document.addEventListener("click", function (e) {
+
+    document.addEventListener("click", (e) => {
 
         if (!e.target.closest(".nav-category")) {
+
             menu.style.display = "none";
+
         }
 
     });
 
-    menu.querySelectorAll("a").forEach(link => {
 
-        link.addEventListener("click", function () {
+    menu.querySelectorAll("a")
+        .forEach(link => {
 
-            menu.style.display = "none";
+            link.addEventListener(
+                "click",
+                () => {
+
+                    menu.style.display = "none";
+
+                }
+            );
 
         });
-
-    });
 
 }
