@@ -1,18 +1,8 @@
 /* =========================
-   Imports
-========================= */
-
-import { setupNavigation } from "./navigation.js";
-import { setupGamesDropdown } from "./games.js";
-import { loadPage } from "./page-loader.js";
-
-
-/* =========================
    Configuration
 ========================= */
 
 const CONFIG = {
-
     homePage: "pages/home.html",
 
     pages: {
@@ -24,7 +14,6 @@ const CONFIG = {
     },
 
     copyTimeout: 1000
-
 };
 
 
@@ -33,9 +22,7 @@ const CONFIG = {
 ========================= */
 
 const STATE = {
-
     currentPage: null
-
 };
 
 
@@ -50,23 +37,15 @@ function init() {
 
     loadPage(CONFIG.homePage);
 
-
-    const homeLink =
-        document.querySelector(
-            `[data-page="${CONFIG.homePage}"]`
-        );
-
+    const homeLink = document.querySelector(
+        `[data-page="${CONFIG.homePage}"]`
+    );
 
     if (homeLink) {
-
         homeLink.classList.add("active");
-
     }
 
 }
 
 
-document.addEventListener(
-    "DOMContentLoaded",
-    init
-);
+document.addEventListener("DOMContentLoaded", init);
