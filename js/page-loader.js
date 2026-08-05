@@ -40,7 +40,12 @@ async function loadPage(page) {
 
 function initializePage(page) {
 
-    addCopyButtons();
-    addLastUpdated(page);
+    if (typeof addCopyButtons === "function") {
+        addCopyButtons();
+    }
+
+    if (typeof addLastUpdated === "function") {
+        addLastUpdated(page);
+    }
 
 }
