@@ -4,38 +4,30 @@
 
 async function loadPage(page) {
 
-    const content =
-        document.getElementById("content");
-
+    const content = document.getElementById("content");
 
     try {
 
-        const response =
-            await fetch(page);
-
+        const response = await fetch(page);
 
         if (!response.ok) {
-
-            throw new Error(
-                `${page} failed to load`
-            );
-
+            throw new Error(`${page} failed to load`);
         }
 
-
-        content.innerHTML =
-            await response.text();
-
+        content.innerHTML = await response.text();
 
         STATE.currentPage = page;
 
-
         initializePage(page);
 
-
-    } catch (error) {
+    } catch(error) {
 
         console.error(error);
+
+        content.innerHTML = `
+            <h2>Page failed to load</h2>
+            <p>${error.message}</p>
+        `;
 
     }
 
@@ -49,7 +41,6 @@ async function loadPage(page) {
 function initializePage(page) {
 
     addCopyButtons();
-
     addLastUpdated(page);
 
 }
