@@ -5,7 +5,7 @@
 const pageUpdates = {
 
     // Main Pages
-    "home.html": "August 2, 2026",
+    "home.html": "August 4, 2026",
     "speedrunning.html": "August 2, 2026",
     "community.html": "August 2, 2026",
 
