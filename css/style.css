@@ -7,6 +7,10 @@
 
 :root {
 
+    /* Layout */
+    --content-width: 1200px;
+    --section-width: 1000px;
+
     /* Colors */
     --background: #0f1115;
     --surface: #171a21;
@@ -18,15 +22,18 @@
     --accent: #4da3ff;
     --accent-hover: #79baff;
 
+
     /* Radius */
     --radius-small: 8px;
     --radius-medium: 12px;
+
 
     /* Spacing */
     --space-xs: 10px;
     --space-sm: 20px;
     --space-md: 30px;
     --space-lg: 40px;
+
 
     /* Animation */
     --transition: 0.2s ease;
@@ -39,7 +46,9 @@
 ========================= */
 
 * {
+
     box-sizing: border-box;
+
 }
 
 
@@ -61,6 +70,7 @@ body {
 
 }
 
+
 header {
 
     display: flex;
@@ -80,7 +90,7 @@ header {
 
 header h1 a {
 
-    color: #ffffff;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -89,7 +99,7 @@ header h1 a {
 
 header h1 a:hover {
 
-    color: #ffffff;
+    color: var(--text);
 
 }
 
@@ -143,7 +153,7 @@ p {
 
     margin: 0;
 
-    color: #fff;
+    color: var(--text);
 
     font-size: 1.4rem;
 
@@ -165,6 +175,7 @@ p {
     font-weight: 500;
 
 }
+
 
 /* =========================
    Resource Cards
@@ -196,11 +207,14 @@ p {
 
     padding: 25px;
 
+    min-height: 160px;
+
     transition:
         border-color var(--transition),
         transform var(--transition);
 
 }
+
 
 .resource-card:hover,
 .game-folder:hover {
@@ -215,7 +229,7 @@ p {
 .resource-card h3,
 .game-folder h3 {
 
-    color: #ffffff;
+    color: var(--text);
 
     margin-top: 0;
 
@@ -224,7 +238,16 @@ p {
 
 .resource-card h4 {
 
-    color: #fff;
+    color: var(--text);
+
+}
+
+
+.resource-card img {
+
+    max-width: 100%;
+
+    border-radius: var(--radius-small);
 
 }
 
@@ -244,7 +267,7 @@ p {
 
 .game-folder summary {
 
-    color: white;
+    color: var(--text);
 
     font-size: 1.2rem;
 
@@ -291,6 +314,7 @@ li {
     transition: border-color var(--transition);
 
 }
+
 
 li:hover {
 
@@ -353,6 +377,7 @@ nav {
 
 }
 
+
 nav a {
 
     display: block;
@@ -369,6 +394,7 @@ nav a {
 
 }
 
+
 nav a:hover {
 
     background: rgba(77, 163, 255, 0.08);
@@ -379,6 +405,7 @@ nav a:hover {
 
 }
 
+
 nav a.active {
 
     color: var(--accent);
@@ -386,6 +413,7 @@ nav a.active {
     font-weight: 600;
 
 }
+
 
 /* =========================
    Game Dropdown
@@ -425,6 +453,15 @@ nav a.active {
 }
 
 
+.submenu.open {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
 .submenu a {
 
     padding: 8px 12px;
@@ -438,9 +475,10 @@ nav a.active {
 
     background: var(--background);
 
-    color: white;
+    color: var(--text);
 
 }
+
 
 /* =========================
    Copy Buttons
@@ -477,7 +515,7 @@ nav a.active {
 
     opacity: 0.7;
 
-    transition: 0.2s ease;
+    transition: var(--transition);
 
 }
 
@@ -509,7 +547,6 @@ button:focus-visible {
 
 @media (max-width: 768px) {
 
-    /* Layout */
 
     header {
 
@@ -519,6 +556,7 @@ button:focus-visible {
 
     }
 
+
     #content {
 
         padding: 20px;
@@ -526,13 +564,12 @@ button:focus-visible {
     }
 
 
-    /* Navigation */
-
     nav {
 
         flex-wrap: wrap;
 
     }
+
 
     .submenu {
 
@@ -540,8 +577,6 @@ button:focus-visible {
 
     }
 
-
-    /* Content */
 
     .resource-grid {
 
