@@ -4,47 +4,54 @@
 
 function addCopyButtons() {
 
-    document.querySelectorAll(".resource-card a").forEach(link => {
+    document
+        .querySelectorAll(".resource-card a")
+        .forEach(link => {
 
-        if (link.parentElement.querySelector(".copy-link")) return;
+            if (link.parentElement.querySelector(".copy-link")) {
+                return;
+            }
 
-        const button = document.createElement("button");
 
-        button.className = "copy-link";
-        button.title = "Copy";
-        button.dataset.url = link.href;
-        button.innerHTML = `<img src="assets/copy.png" alt="Copy">`;
+            const button =
+                document.createElement("button");
 
-        link.parentElement.appendChild(button);
 
-    });
+            button.className = "copy-link";
+            button.title = "Copy";
+            button.dataset.url = link.href;
+
+            button.innerHTML =
+                `<img src="assets/copy.png" alt="Copy">`;
+
+
+            button.addEventListener(
+                "click",
+                () => copyLink(button.dataset.url, button)
+            );
+
+
+            link.parentElement.appendChild(button);
+
+        });
 
 }
 
 
 function copyLink(url, button) {
 
-    navigator.clipboard.writeText(url).then(() => {
+    navigator.clipboard.writeText(url)
+        .then(() => {
 
-        button.title = "Copied!";
+            button.title = "Copied!";
 
-        setTimeout(() => {
 
-            button.title = "Copy";
+            setTimeout(() => {
 
-        }, CONFIG.copyTimeout);
+                button.title = "Copy";
 
-    });
+            }, 1000);
+
+        });
 
 }
-
-
-document.addEventListener("click", function (e) {
-
-    const button = e.target.closest(".copy-link");
-
-    if (!button) return;
-
-    copyLink(button.dataset.url, button);
-
-});
