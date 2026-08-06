@@ -1,1 +1,76 @@
+{
+    "title": "Horizon Forbidden West: Burning Shores",
 
+    "sections": [
+        {
+            "title": "Official Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Fandom Website",
+                    "url": "https://horizon.fandom.com/wiki/Horizon_Forbidden_West:_Burning_Shores"
+                },
+                {
+                    "title": "Patch Notes",
+                    "url": "https://horizon.fandom.com/wiki/Horizon_Forbidden_West_Updates"
+                }
+            ]
+        },
+        {
+            "title": "Guides",
+
+            "type": "links",
+
+            "items": []
+        },
+        {
+            "title": "Tools",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Map Genie - Interactive Map",
+                    "url": "https://mapgenie.io/horizon-forbidden-west/maps/burning-shores"
+                },
+                {
+                    "title": "IGN - Interactive Map",
+                    "url": "https://www.ign.com/maps/horizon-2-forbidden-west/burning-shores"
+                }
+            ]
+        },
+        {
+            "title": "Speedrun Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "HFW Leaderboards",
+                    "url": "https://www.speedrun.com/hfw"
+                }
+            ]
+        },
+        {
+            "title": "Research",
+
+            "type": "links",
+
+            "items": []
+        },
+        {
+            "title": "Modding & Development",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Ghidra - Reverse Engineering Tool",
+                    "url": "https://github.com/NationalSecurityAgency/ghidra"
+                }
+            ]
+        }
+    ]
+}
