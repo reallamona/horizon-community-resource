@@ -1,1 +1,66 @@
+{
+    "title": "Speedrunning",
 
+    "sections": [
+        {
+            "title": "Leaderboards & Community",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Horizon Leaderboards",
+                    "url": "https://www.speedrun.com/series/horizon"
+                },
+                {
+                    "title": "Horizon Speedrun Discord",
+                    "url": "https://discord.com/invite/d92k8NP"
+                },
+                {
+                    "title": "Community YouTube",
+                    "url": "https://www.youtube.com/@horizonspeedrun"
+                },
+                {
+                    "title": "Community Twitch",
+                    "url": "https://www.twitch.tv/horizonspeedrun"
+                }
+            ]
+        },
+        {
+            "title": "Speedrun Tools",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "LiveSplit - Speedrun Timer",
+                    "url": "https://livesplit.org/"
+                },
+                {
+                    "title": "FramePerfect - Mobile Speedrun Timer",
+                    "url": "https://futuretrostudios.com/frameperfect/"
+                },
+                {
+                    "title": "Splitty - Web Based Timer",
+                    "url": "https://ylorant.github.io/splitty/"
+                },
+                {
+                    "title": "OBS Studio - Streaming & Recording",
+                    "url": "https://obsproject.com/"
+                },
+                {
+                    "title": "PS4 Broadcasting - Official Setup",
+                    "url": "https://www.playstation.com/en-ca/support/games/ps4-stream-gameplay-and-broadcast/"
+                },
+                {
+                    "title": "VidTimer - Video Reviewer Tool",
+                    "url": "https://vidtimer.com/"
+                },
+                {
+                    "title": "8mb.video - Video Compressor",
+                    "url": "https://8mb.video/"
+                }
+            ]
+        }
+    ]
+}
