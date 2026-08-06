@@ -1,1 +1,64 @@
+{
+    "title": "Horizon Call Of The Mountain",
 
+    "sections": [
+        {
+            "title": "Official Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Fandom Website",
+                    "url": "https://horizon.fandom.com/wiki/Horizon_Call_of_the_Mountain"
+                },
+                {
+                    "title": "Patch Notes",
+                    "url": "https://horizon.fandom.com/wiki/Horizon_Call_of_the_Mountain_Updates"
+                }
+            ]
+        },
+        {
+            "title": "Guides",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "All Collectibles Forum",
+                    "url": "https://forum.psnprofiles.com/topic/140227-horizon-call-of-the-mountain-all-collectible-locations-trophy-guides-100/"
+                }
+            ]
+        },
+        {
+            "title": "Speedrun Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "HCOTM Leaderboards",
+                    "url": "https://www.speedrun.com/hcotm"
+                },
+                {
+                    "title": "HCOTM Speedrun Wiki",
+                    "url": "https://wiki.frameperfect.space/wiki/Horizon_Call_of_the_Mountain"
+                }
+            ]
+        },
+        {
+            "title": "Research",
+
+            "type": "links",
+
+            "items": []
+        },
+        {
+            "title": "Modding & Development",
+
+            "type": "links",
+
+            "items": []
+        }
+    ]
+}
