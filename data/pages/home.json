@@ -1,1 +1,31 @@
+{
+    "title": "Home",
 
+    "intro": {
+        "title": "The Horizon Project",
+        "description": "The Horizon Project is dedicated to documenting, preserving, and sharing the technical knowledge that drives the Horizon speedrunning and research communities."
+    },
+
+    "sections": [
+        {
+            "title": "Featured Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Horizon Fandom Wiki",
+                    "url": "https://horizon.fandom.com/wiki/Horizon"
+                },
+                {
+                    "title": "Horizon Support",
+                    "url": "https://www.playstation.com/en-ca/horizon/support/"
+                },
+                {
+                    "title": "Official Horizon Website",
+                    "url": "https://www.playstation.com/en-ca/horizon/"
+                }
+            ]
+        }
+    ]
+}
