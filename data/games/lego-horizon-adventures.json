@@ -1,1 +1,69 @@
+{
+    "title": "LEGO Horizon Adventures",
 
+    "sections": [
+        {
+            "title": "Official Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Buy on Steam",
+                    "url": "https://store.steampowered.com/app/2428810/LEGO_Horizon_Adventures/"
+                },
+                {
+                    "title": "Fandom Website",
+                    "url": "https://horizon.fandom.com/wiki/LEGO_Horizon_Adventures"
+                },
+                {
+                    "title": "Patch Notes",
+                    "url": "https://horizon.fandom.com/wiki/LEGO_Horizon_Adventures_Updates"
+                }
+            ]
+        },
+        {
+            "title": "Guides",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "100% Completion Guide",
+                    "url": "https://www.youtube.com/playlist?list=PLs9rvQZdz2r6g74lvS569oI1IU5OxGkNn"
+                }
+            ]
+        },
+        {
+            "title": "Speedrun Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "LH Leaderboards",
+                    "url": "https://www.speedrun.com/lh"
+                }
+            ]
+        },
+        {
+            "title": "Research",
+
+            "type": "links",
+
+            "items": []
+        },
+        {
+            "title": "Modding & Development",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Ghidra - Reverse Engineering Tool",
+                    "url": "https://github.com/NationalSecurityAgency/ghidra"
+                }
+            ]
+        }
+    ]
+}
