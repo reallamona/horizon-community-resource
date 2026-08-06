@@ -1,1 +1,110 @@
+{
+    "title": "Horizon Zero Dawn",
 
+    "sections": [
+        {
+            "title": "Official Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Buy on Steam",
+                    "url": "https://store.steampowered.com/app/1151640/Horizon_Zero_Dawn_Complete_Edition/"
+                },
+                {
+                    "title": "Fandom Website",
+                    "url": "https://horizon.fandom.com/wiki/Horizon_Zero_Dawn"
+                },
+                {
+                    "title": "Patch Notes",
+                    "url": "https://horizon.fandom.com/wiki/Horizon_Zero_Dawn_updates"
+                }
+            ]
+        },
+        {
+            "title": "Guides",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "100% Completion Guide",
+                    "url": "https://www.youtube.com/watch?v=3MX8S3owsa0"
+                }
+            ]
+        },
+        {
+            "title": "Tools",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Map Genie - Interactive Map",
+                    "url": "https://mapgenie.io/horizon-zero-dawn"
+                },
+                {
+                    "title": "IGN - Interactive Map",
+                    "url": "https://www.ign.com/maps/horizon-zero-dawn/world"
+                }
+            ]
+        },
+        {
+            "title": "Speedrun Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "HZD Leaderboards",
+                    "url": "https://www.speedrun.com/hzd"
+                },
+                {
+                    "title": "HZD Speedrun Wiki",
+                    "url": "https://wiki.frameperfect.space/wiki/Horizon_Zero_Dawn"
+                }
+            ]
+        },
+        {
+            "title": "Research",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "HZD - The Making Of",
+                    "url": "https://www.youtube.com/watch?v=h9tLcD1r-6w"
+                },
+                {
+                    "title": "HZD - Vegetation BTS",
+                    "url": "https://www.youtube.com/watch?v=wavnKZNSYqU"
+                },
+                {
+                    "title": "HZD - Animation Reel",
+                    "url": "https://www.youtube.com/watch?v=HiRw_bI-8fQ"
+                },
+                {
+                    "title": "HZD - Cut Content",
+                    "url": "https://horizon.fandom.com/wiki/Cut_Content"
+                }
+            ]
+        },
+        {
+            "title": "Modding & Development",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "HZD - Nexus Mods",
+                    "url": "https://www.nexusmods.com/games/horizonzerodawn"
+                },
+                {
+                    "title": "Ghidra - Reverse Engineering Tool",
+                    "url": "https://github.com/NationalSecurityAgency/ghidra"
+                }
+            ]
+        }
+    ]
+}
