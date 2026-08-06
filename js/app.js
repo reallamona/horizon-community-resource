@@ -3,15 +3,15 @@
 ========================= */
 
 const CONFIG = {
-    homePage: "pages/home.html",
+    homePage: "pages/home.json",
 
     pages: {
-        home: "pages/home.html",
-        games: "pages/games.html",
-        research: "pages/research.html",
-        speedrunning: "pages/speedrunning.html",
-        community: "pages/community.html"
-    },
+        home: "pages/home.json",
+        games: "pages/games.json",
+        community: "pages/community.json",
+        speedrunning: "pages/speedrunning.json"
+    }
+};
 
     copyTimeout: 1000
 };
