@@ -1,1 +1,46 @@
+{
+    "title": "Horizon Hunters Gathering",
 
+    "sections": [
+        {
+            "title": "Official Resources",
+
+            "type": "links",
+
+            "items": [
+                {
+                    "title": "Fandom Website",
+                    "url": "https://horizon.fandom.com/wiki/Horizon_Hunters_Gathering"
+                }
+            ]
+        },
+        {
+            "title": "Guides",
+
+            "type": "links",
+
+            "items": []
+        },
+        {
+            "title": "Speedrun Resources",
+
+            "type": "links",
+
+            "items": []
+        },
+        {
+            "title": "Research",
+
+            "type": "links",
+
+            "items": []
+        },
+        {
+            "title": "Modding & Development",
+
+            "type": "links",
+
+            "items": []
+        }
+    ]
+}
