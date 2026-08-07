@@ -41,7 +41,6 @@ function init() {
 
     setupGamesDropdown();
 
-
     loadPage(CONFIG.homePage);
 
 
@@ -57,27 +56,6 @@ function init() {
     }
 
 }
-
-
-document.addEventListener("DOMContentLoaded", init);
-    setupNavigation();
-
-    setupGamesDropdown();
-
-
-    loadPage(CONFIG.homePage);
-
-
-    const homeLink = document.querySelector(
-        `[data-page="${CONFIG.homePage}"]`
-    );
-
-
-    if (homeLink) {
-
-        homeLink.classList.add("active");
-
-    }
 
 
 document.addEventListener("DOMContentLoaded", init);
