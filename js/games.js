@@ -43,25 +43,4 @@ function setupGamesDropdown() {
 
         });
 
-}            menu.style.display = "none";
-
-        }
-
-    });
-
-
-    menu.querySelectorAll("a")
-        .forEach(link => {
-
-            link.addEventListener(
-                "click",
-                () => {
-
-                    menu.style.display = "none";
-
-                }
-            );
-
-        });
-
 }
