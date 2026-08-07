@@ -4,14 +4,11 @@
 
 const pageUpdates = {
 
-    // Main Pages
     "data/pages/home.json": "August 4, 2026",
     "data/pages/speedrunning.json": "August 2, 2026",
     "data/pages/community.json": "August 2, 2026",
     "data/pages/games.json": "August 2, 2026",
 
-
-    // Games
     "data/games/horizon-zero-dawn.json": "August 2, 2026",
     "data/games/frozen-wilds.json": "August 2, 2026",
     "data/games/zero-dawn-remastered.json": "August 2, 2026",
@@ -35,17 +32,6 @@ function addLastUpdated(page) {
 
     if (!updated) return;
 
-
-    const update = pageUpdates[page];
-
-
-    if (update) {
-
-        updated.textContent = `Last Updated: ${update}`;
-
-    }
-
-}
 
     const update = pageUpdates[page];
 
