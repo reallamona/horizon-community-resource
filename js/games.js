@@ -18,29 +18,41 @@ function setupGamesDropdown() {
 
         e.stopPropagation();
 
-        menu.classList.toggle("open");
 
-    });
+        if (menu.style.display === "flex") {
 
+            menu.style.display = "none";
 
-    document.addEventListener("click", function(e) {
+        } else {
 
-        if (!e.target.closest(".nav-category")) {
+            menu.style.display = "flex";
 
-            menu.classList.remove("open");
+            menu.style.flexDirection = "column";
 
         }
 
     });
 
 
-    menu.querySelectorAll("a").forEach(link => {
+    menu.querySelectorAll("a")
+        .forEach(link => {
 
-        link.addEventListener("click", function() {
+            link.addEventListener("click", function() {
 
-            menu.classList.remove("open");
+                menu.style.display = "none";
+
+            });
 
         });
+
+
+    document.addEventListener("click", function(e) {
+
+        if (!e.target.closest(".nav-category")) {
+
+            menu.style.display = "none";
+
+        }
 
     });
 
