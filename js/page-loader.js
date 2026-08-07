@@ -29,7 +29,7 @@ async function loadPage(page) {
 
             <div class="resource-grid">
 
-                ${data.sections.map(section => `
+                ${(data.sections || []).map(section => `
 
                     <div class="resource-card">
 
@@ -80,8 +80,11 @@ async function loadPage(page) {
 
 
         content.innerHTML = `
+
             <h2>Page failed to load</h2>
+
             <p>${error.message}</p>
+
         `;
 
     }
@@ -95,15 +98,17 @@ async function loadPage(page) {
 
 function initializePage(page) {
 
-
     if (typeof addCopyButtons === "function") {
+
         addCopyButtons();
+
     }
 
 
     if (typeof addLastUpdated === "function") {
-        addLastUpdated(page);
-    }
 
+        addLastUpdated(page);
+
+    }
 
 }
