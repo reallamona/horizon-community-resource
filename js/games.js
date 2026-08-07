@@ -6,33 +6,35 @@ function setupGamesDropdown() {
 
     const category = document.querySelector(".nav-category");
 
-    if (!category) return;
-
-
     const button = category.querySelector(":scope > a");
 
     const menu = category.querySelector(".submenu");
 
 
-    if (!button || !menu) return;
+    if (!category || !button || !menu) return;
 
 
     button.addEventListener("click", function(e) {
 
         e.preventDefault();
 
+        e.stopPropagation();
+
         menu.classList.toggle("open");
 
     });
 
 
-    document.addEventListener("click", function(e) {
+    menu.addEventListener("click", function(e) {
 
-        if (!category.contains(e.target)) {
+        e.stopPropagation();
 
-            menu.classList.remove("open");
+    });
 
-        }
+
+    document.addEventListener("click", function() {
+
+        menu.classList.remove("open");
 
     });
 
