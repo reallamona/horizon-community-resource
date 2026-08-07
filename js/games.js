@@ -4,56 +4,45 @@
 
 function setupGamesDropdown() {
 
+    const category = document.querySelector(".nav-category");
+
     const button = document.querySelector(".nav-category > a");
 
     const menu = document.querySelector(".submenu");
 
 
-    if (!button || !menu) return;
+    if (!category || !button || !menu) {
+
+        console.error("Games dropdown elements missing");
+
+        return;
+
+    }
 
 
-    button.addEventListener("click", function(e) {
+    button.onclick = function(e) {
 
         e.preventDefault();
 
         e.stopPropagation();
 
 
-        if (menu.style.display === "flex") {
+        menu.classList.toggle("open");
 
-            menu.style.display = "none";
-
-        } else {
-
-            menu.style.display = "flex";
-
-            menu.style.flexDirection = "column";
-
-        }
-
-    });
+    };
 
 
-    menu.querySelectorAll("a")
-        .forEach(link => {
+    menu.onclick = function(e) {
 
-            link.addEventListener("click", function() {
+        e.stopPropagation();
 
-                menu.style.display = "none";
-
-            });
-
-        });
+    };
 
 
-    document.addEventListener("click", function(e) {
+    document.onclick = function() {
 
-        if (!e.target.closest(".nav-category")) {
+        menu.classList.remove("open");
 
-            menu.style.display = "none";
-
-        }
-
-    });
+    };
 
 }
