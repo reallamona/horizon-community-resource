@@ -11,6 +11,7 @@
     --content-width: 1200px;
     --section-width: 1000px;
 
+
     /* Colors */
     --background: #0f1115;
     --surface: #171a21;
@@ -304,8 +305,6 @@ li {
     margin: var(--space-xs) 0;
 
     padding: 12px 15px;
-
-    background: var(--surface);
 
     border: 1px solid var(--border);
 
