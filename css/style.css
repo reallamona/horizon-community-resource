@@ -445,9 +445,7 @@ nav a.active {
 
     padding: var(--space-xs);
 
-    z-index: 10;
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    z-index: 9999;
 
 }
 
@@ -457,24 +455,6 @@ nav a.active {
     display: flex;
 
     flex-direction: column;
-
-}
-
-
-.submenu a {
-
-    padding: 8px 12px;
-
-    color: #aaa;
-
-}
-
-
-.submenu a:hover {
-
-    background: var(--background);
-
-    color: var(--text);
 
 }
 
