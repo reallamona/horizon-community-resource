@@ -12,16 +12,18 @@ function setupGamesDropdown() {
     if (!button || !menu) return;
 
 
-    button.addEventListener("click", (e) => {
+    button.addEventListener("click", function(e) {
 
         e.preventDefault();
+
+        e.stopPropagation();
 
         menu.classList.toggle("open");
 
     });
 
 
-    document.addEventListener("click", (e) => {
+    document.addEventListener("click", function(e) {
 
         if (!e.target.closest(".nav-category")) {
 
@@ -32,15 +34,14 @@ function setupGamesDropdown() {
     });
 
 
-    menu.querySelectorAll("a")
-        .forEach(link => {
+    menu.querySelectorAll("a").forEach(link => {
 
-            link.addEventListener("click", () => {
+        link.addEventListener("click", function() {
 
-                menu.classList.remove("open");
-
-            });
+            menu.classList.remove("open");
 
         });
+
+    });
 
 }
