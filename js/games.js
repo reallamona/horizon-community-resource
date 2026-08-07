@@ -4,11 +4,9 @@
 
 function setupGamesDropdown() {
 
-    const button =
-        document.querySelector(".nav-category > a");
+    const button = document.querySelector(".nav-category > a");
 
-    const menu =
-        document.querySelector(".submenu");
+    const menu = document.querySelector(".submenu");
 
 
     if (!button || !menu) return;
@@ -18,14 +16,7 @@ function setupGamesDropdown() {
 
         e.preventDefault();
 
-        const open =
-            menu.style.display === "flex";
-
-
-        menu.style.display =
-            open ? "none" : "flex";
-
-        menu.style.flexDirection = "column";
+        menu.classList.toggle("open");
 
     });
 
@@ -34,7 +25,25 @@ function setupGamesDropdown() {
 
         if (!e.target.closest(".nav-category")) {
 
-            menu.style.display = "none";
+            menu.classList.remove("open");
+
+        }
+
+    });
+
+
+    menu.querySelectorAll("a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                menu.classList.remove("open");
+
+            });
+
+        });
+
+}            menu.style.display = "none";
 
         }
 
