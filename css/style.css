@@ -459,6 +459,23 @@ nav a.active {
 }
 
 
+.submenu a {
+
+    padding: 8px 12px;
+
+    color: #aaa;
+
+}
+
+.submenu a:hover {
+
+    background: var(--background);
+
+    color: var(--text);
+
+}
+
+
 /* =========================
    Copy Buttons
 ========================= */
