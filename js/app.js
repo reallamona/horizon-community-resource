@@ -4,13 +4,15 @@
 
 const CONFIG = {
 
-    homePage: "pages/home.json",
+    homePage: "data/pages/home.json",
 
     pages: {
-        home: "pages/home.json",
-        games: "pages/games.json",
-        community: "pages/community.json",
-        speedrunning: "pages/speedrunning.json"
+
+        home: "data/pages/home.json",
+        games: "data/pages/games.json",
+        community: "data/pages/community.json",
+        speedrunning: "data/pages/speedrunning.json"
+
     },
 
     copyTimeout: 1000
@@ -35,6 +37,29 @@ const STATE = {
 
 function init() {
 
+    setupNavigation();
+
+    setupGamesDropdown();
+
+
+    loadPage(CONFIG.homePage);
+
+
+    const homeLink = document.querySelector(
+        `[data-page="${CONFIG.homePage}"]`
+    );
+
+
+    if (homeLink) {
+
+        homeLink.classList.add("active");
+
+    }
+
+}
+
+
+document.addEventListener("DOMContentLoaded", init);
     setupNavigation();
 
     setupGamesDropdown();
