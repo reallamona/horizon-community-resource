@@ -4,14 +4,17 @@
 
 function setupGamesDropdown() {
 
-    const button = document.querySelector(".nav-category > a");
+    const category = document.querySelector(".nav-category");
 
-    const menu = document.querySelector(".submenu");
+    if (!category) return;
 
 
-    if (!button || !menu) {
-        return;
-    }
+    const button = category.querySelector(":scope > a");
+
+    const menu = category.querySelector(".submenu");
+
+
+    if (!button || !menu) return;
 
 
     button.addEventListener("click", function(e) {
@@ -25,7 +28,7 @@ function setupGamesDropdown() {
 
     document.addEventListener("click", function(e) {
 
-        if (!e.target.closest(".nav-category")) {
+        if (!category.contains(e.target)) {
 
             menu.classList.remove("open");
 
